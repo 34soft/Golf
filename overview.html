@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Golf Reservation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" media="screen">
+<link href="bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+<link href="css/bootflat.css" rel="stylesheet" media="screen">
+<link href="css/bootflat-extensions.css" rel="stylesheet" media="screen">
+<link href="css/bootflat-square.css" rel="stylesheet" media="screen">
+<link href="css/style.css" rel="stylesheet" media="screen">
+<link href="css/chosen.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="js/jquery-ui.css">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body>
+
+<!--- header nav ---->
+<header role="banner" class="navbar navbar-inverse" id="header">
+  <div class="navbar-header"> <a class="navbar-brand" href="../index.html"> GOLF <span> CLUB </span> </a> 
+    
+    <!--<button data-target=".bf-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed"> <span class="sr-only"> navigation </span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> -->
+    
+    <div class="nav-button" id="hide2"> <img src="images/gears.png"> </div>
+  </div>
+  <div id="firstimpression2" class="patientinfodivs nav-button-inner">
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <form class="bf-example bf-example-control-sizing">
+          <div class="form-search search-only">
+            <input type="text" class="form-control search-query">
+          </div>
+        </form>
+      </li>
+      <li class="active"><a href="#"> Welcome Admin </a></li>
+      <li><a href="#"> Account </a></li>
+      <li class="logout"><a href="#"> Logout</a></li>
+      <li class="gears"><a href="#"> <img src="images/gears.png"> </a> </li>
+    </ul>
+  </div>
+</header>
+
+<!-- header nav closed -->
+
+<div class="content">
+  <div class="row"> 
+    
+    <!--- aside menu start ---->
+    
+    <div class="col-md-2" id="aside">
+      <div class="home-navigation"> Navigation </div>
+      <div id="firstimpression1" class="patientinfodivs1">
+        <ul class="nav nav-list nav-list-panel" >
+          <li class="dashbord"><a href="#"> Dashboard </a></li>
+          <li class="active itineraries" id="create-menu"> <a href="#"> Itineraries </a> </li>
+		   <li class="create-sub-menu" id="create-sub-menu">
+		  <ul>
+          <li class="overview"> Overview </li>
+          <li class="nav-header"> Create </li>
+		  </ul>
+		   </li>
+		  
+          <li class="golf"><a href="#"> Golf </a> </li>
+          <li class="meals"><a href="#"> Meals </a></li>
+          <li class="events"><a href="#"> Events </a></li>
+          <li class="transport"><a href="#"> Transport </a></li>
+          <li class="accomodations"><a href="#"> Accomodations </a></li>
+          <li class="reports"><a href="#"> Reports </a></li>
+          <li class="members"><a href="#"> Members </a></li>
+		 
+		  
+        </ul>
+      </div>
+    </div>
+    <!--- aside menu start closed ----> 
+    
+    <!--- right content section --->
+    <div class="col-md-10" id="itinerary-content"> 
+      
+      <!--- new Itinerary start --->
+      <div class="patientinfodivs1" id="firstimpression3">
+        <div class="new-itinerary"> 
+          
+          <!-- // overview top nav // -->
+          <ul class="nav navbar-nav overview-topnav">
+            <li class="active"> <a href="#"> Today </a> </li>
+            <li> <a href="#"> Week </a> </li>
+            <li> <a href="#"> Month </a> </li>
+          </ul>
+          <div class="itinerary-menu">
+            <div class="col-md-12">
+              <ul class="nav navbar-nav">
+                <li class="quick-action"><a href="#"> Quick Actions</a>
+                  <ul class="sub-menu">
+                    <li> <a href="#"> Create </a> </li>
+                    <li> <a href="#"> Members </a> </li>
+                    <li> <a href="#"> Reports </a> </li>
+                  </ul>
+                </li>
+                <li class="quick-report"><a href="#">Quick Reports</a>
+                  <ul class="sub-menu">
+                    <li> <a href="#"> Members </a> </li>
+                    <li> <a href="#"> Reports</a> </li>
+                    <li> <a href="#"> Create </a> </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="advance-Search" id="hide"> <a class="btn" href="#"> Advanced Search </a> </div>
+              <div id="firstimpression" class="patientinfodivs advance-none">
+                <form class="bf-example" id="searching-input">
+                  <div class="row">
+                    <div class="col-lg-1">
+                      <input type="text" placeholder="Itinerary #" class="form-control">
+                    </div>
+                    <div class="col-lg-3">
+                      <input type="text" placeholder="Member" class="form-control">
+                    </div>
+                    <div class="col-lg-3">
+                      <input type="text" placeholder="Tags" class="form-control">
+                    </div>
+                    <div class="col-lg-2"> <span class="Start"> Start </span>
+                      <input type="text" placeholder="" id="datepicker3" class="form-control">
+                    </div>
+                    <div class="col-lg-3"> <span class="end"> end </span>
+                      <input type="text" placeholder="" id="datepicker4" class="form-control">
+                      <input type="button" class="advance-search1" value="search"/>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- new Itinerary start end ---> 
+      
+      <!--- detail content sections --->
+      <div class="detail"> 
+        
+        <!-- // View Itinerary tab // -->
+        <div id="tab-cont">
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav active-tab">
+              <li class="active"><a href="#"> Active </a></li>
+              <li> <a href="#"> Finished / Archived </a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right activity-nav">
+              <li class="active"><a href="#"> <img src="images/activity-black.png"/> Activity </a></li>
+              <li> <a href="#"> <img src="images/activity-blue.png"/> Activity w/new note (click to see note) </a></li>
+            </ul>
+            <ul class="nav navbar-nav active-sub-nav">
+              <li class="active"><a href="#"> Today </a></li>
+              <li> <a href="#"> Week </a></li>
+              <li> <a href="#"> Month </a></li>
+              <li> <a href="#"> All </a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- end View Itinerary tab --> 
+        
+        <!-- // people-gp // -->
+        <div class="bf-example" id="activity-table">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th> Itinerary # <a href="#" class="caret-up"> <i class="fa fa-sort-up"> </i> </a> <a href="#" class="caret-down"><i class="fa fa-caret-down"></i></a> </th>
+                <th> Start Date <a href="#" class="caret-up active"> <i class="fa fa-sort-up"> </i> </a> <a href="#" class="caret-down"><i class="fa fa-caret-down"></i></a> </th>
+                <th> End Date <a href="#" class="caret-up"> <i class="fa fa-sort-up"> </i> </a> <a href="#" class="caret-down"><i class="fa fa-caret-down"></i></a> </th>
+                <th> Responsible Member <a href="#" class="caret-up"> <i class="fa fa-sort-up"> </i> </a> <a href="#" class="caret-down"><i class="fa fa-caret-down"></i></a> </th>
+                <th> Activities / Notes <a href="#" class="caret-up"> <i class="fa fa-sort-up"> </i> </a> <a href="#" class="caret-down"><i class="fa fa-caret-down"></i></a> </th>
+                <th> Details <a href="#" class="caret-up"> <i class="fa fa-sort-up"> </i> </a> <a href="#" class="caret-down"><i class="fa fa-caret-down"></i></a> </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#35234554</td>
+                <td>10/12/2013</td>
+                <td>10/12/2013</td>
+                <td>Collom, Lyle </td>
+                <td class="icons"><span class="golf-icon-active"> </span> <span class="meal-icon-active"> </span> <span class="event-icon-active"> </span> <span class="transport-icon-active"> </span> <span class="accomodation-icon-active"> </span></td>
+                <td><input type="button" name="" class="activity-serach"/></td>
+              </tr>
+              <tr>
+                <td> #42354555</td>
+                <td>10/13/2013</td>
+                <td>10/13/2013</td>
+                <td> Tinkler, Kelvin </td>
+                <td class="icons"><span class="golf-icon-small"> </span> <span class="meal-icon-small"> </span> <span class="event-icon-small"> </span> <span class="transport-icon-small"> </span> <span class="accomodation-icon-small"> </span></td>
+                <td><input type="button" name="" class="activity-serach"/></td>
+              </tr>
+              <tr>
+                <td> #12423544</td>
+                <td>10/14/2013</td>
+                <td>10/16/2013</td>
+                <td> Norgard, Kerry </td>
+                <td class="icons"><span class="meal-icon-small"> </span> <span class="transport-icon-small"> </span> <span class="accomodation-icon-active"> </span></td>
+                <td><input type="button" name="" class="activity-serach"/></td>
+              </tr>
+              <tr>
+                <td> #34573893</td>
+                <td>10/16/2013</td>
+                <td>10/19/2013</td>
+                <td> Strebel, Joey </td>
+                <td class="icons"><span class="golf-icon-active"> </span> <span class="transport-icon-small"> </span></td>
+                <td><input type="button" name="" class="activity-serach"/></td>
+              </tr>
+              <tr>
+                <td> #87634542</td>
+                <td>10/16/2013</td>
+                <td>10/18/2013</td>
+                <td> Ishibashi. Trevor </td>
+                <td class="icons"><span class="golf-icon-active"> </span><span class="accomodation-icon-small"> </span></td>
+                <td><input type="button" name="" class="activity-serach"/></td>
+              </tr>
+              <tr>
+                <td> #89546579</td>
+                <td>10/18/2013</td>
+                <td>10/18/2013</td>
+                <td> Lefort, Oliver </td>
+                <td class="icons"><span class="transport-icon-active"> </span> <span class="accomodation-icon-small"> </span></td>
+                <td><input type="button" name="" class="activity-serach"/></td>
+              </tr>
+              <tr>
+                <td> #08978531</td>
+                <td>10/22/2013</td>
+                <td>10/23/2013</td>
+                <td> Johnosn, Evan </td>
+                <td class="icons"><span class="golf-icon-active"> </span> <span class="meal-icon-small"> </span> <span class="transport-icon-active"> </span> </td>
+                <td><input type="button" name="" class="activity-serach"/></td>
+              </tr>
+              <tr>
+                <td> #76900543</td>
+                <td>10/22/2013</td>
+                <td>10/25/2013</td>
+                <td> Berber, Otis </td>
+                <td class="icons"><span class="event-icon-small"> </span> <span class="transport-icon-active"> </span> <span class="accomodation-icon-active"> </span></td>
+                <td><input type="button" name="" class="activity-serach"/></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="bf-example padination-cont"> <a href="#" class="previous"> </a> <span class="pagination-text"> Showing 10 of 151 Itineraries </span>
+            <ul class="pagination pagination-square">
+              <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li> .... </li>
+              <li><a href="#">15</a></li>
+            </ul>
+            <a href="#" class="next"> </a> </div>
+        </div>
+        <!-- people-gp end --> 
+        
+      </div>
+      <!-- detail end --> 
+      
+    </div>
+  </div>
+</div>
+<!--- main content end ---> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.icheck.js"></script> 
+<script src="js/jquery-1.10.1.min.js"></script> 
+<script src="js/bootstrap-carousel.js"></script> 
+<script src="js/bootstrap-transition.js"></script> 
+<script src="js/head.js"></script> 
+<script src="js/bootstrap.js"> </script> 
+<script src="js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+$('.create-sub-menu').css({"display":"none"});
+  var counter =  1;
+  $("#hide").addClass('hide1');
+  $("#hide").click(function(e){
+	e.preventDefault();
+    $("#firstimpression").toggle();
+	if(counter%2 == 0)
+	{
+	$(this).removeClass('show');
+	$(this).addClass('hide1');
+	}
+	else
+	{
+	$(this).addClass('show');
+	$(this).removeClass('hide1');
+	}
+	counter++;
+    //$(".slidingDiv, .create-sub-menu").css("display","block");
+  });
+  $('#create-menu').click(function(e){
+	e.preventDefault();
+	$('.create-sub-menu').toggle();
+  });
+});
+</script>
+
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $('.home-navigation').click(function(e){
+	e.preventDefault();
+	$('.patientinfodivs1').toggle();
+  });
+});
+</script> 
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $("#hide1").click(function(){
+    $("#firstimpression1").toggle();
+    $(".slidingDiv").css("display","block");
+  });
+});
+</script> 
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $("#hide2").click(function(){
+    $("#firstimpression2").toggle();
+    $(".slidingDiv").css("display","block");
+  });
+});
+</script> 
+<script>
+$(function() {
+$( "#datepicker, #datepicker1, #datepicker2, #datepicker3, #datepicker4" ).datepicker({
+showOn: "button",
+buttonImage: "images/calendar.gif",
+buttonImageOnly: true
+});
+});
+</script> 
+<script>
+$(document).ready(function(){
+  $("#hide1").click(function(){
+    $("#firstimpression3").show();
+  });
+});
+</script> 
+
+</body>
+</html>

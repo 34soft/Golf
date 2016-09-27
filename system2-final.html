@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Golf Reservation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" media="screen">
+<link href="bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+<link href="css/bootflat.css" rel="stylesheet" media="screen">
+<link href="css/bootflat-extensions.css" rel="stylesheet" media="screen">
+<link href="css/bootflat-square.css" rel="stylesheet" media="screen">
+<link href="css/style.css" rel="stylesheet" media="screen">
+<link href="css/chosen.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="js/jquery-ui.css">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+      <![endif]-->
+
+</head>
+<body>
+
+<!--- header nav ---->
+<header role="banner" class="navbar navbar-inverse" id="header">
+  <div class="navbar-header"> <a class="navbar-brand" href="../index.html"> GOLF <span> CLUB </span> </a> 
+    
+    <!--<button data-target=".bf-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed"> <span class="sr-only"> navigation </span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> -->
+    
+    <div class="nav-button" id="hide2"> <img src="images/gears.png"> </div>
+  </div>
+  <div id="firstimpression2" class="patientinfodivs nav-button-inner">
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <form class="bf-example bf-example-control-sizing">
+          <div class="form-search search-only">
+            <input type="text" class="form-control search-query">
+          </div>
+        </form>
+      </li>
+      <li class="active"><a href="#"> Welcome Admin </a></li>
+      <li><a href="#"> Account </a></li>
+      <li class="logout"><a href="#"> Logout</a></li>
+      <li class="gears"><a href="#"> <img src="images/gears.png"> </a> </li>
+    </ul>
+  </div>
+</header>
+
+<!-- header nav closed -->
+
+<div class="content">
+  <div class="row"> 
+    
+    <!--- aside menu start ---->
+    
+    <div class="col-md-2 system2-final" id="aside">
+      <div class="home-navigation"> Navigation </div>
+      <div id="firstimpression1" class="patientinfodivs1">
+        <ul class="nav nav-list nav-list-panel" >
+          <li class="active dashbord"> <a href="#"> Dashboard </a></li>
+          <li class="itineraries" id="create-menu"> <a href="#"> Itineraries</a> </li>
+		  <li class="create-sub-menu" id="create-sub-menu">
+		  <ul>
+          <li class="overview"> Overview </li>
+          <li class="nav-header"> Create </li>
+		  </ul>
+		   </li>
+		  
+		  
+		  
+          <li class="golf"><a href="#"> Golf </a> </li>
+          <li class="meals"><a href="#"> Meals </a></li>
+          <li class="events"><a href="#"> Events </a></li>
+          <li class="transport"><a href="#"> Transport </a></li>
+          <li class="accomodations"><a href="#"> Accomodations </a></li>
+          <li class="reports"><a href="#"> Reports </a></li>
+          <li class="members"><a href="#"> Members </a></li>
+        </ul>
+      </div>
+    </div>
+    <!--- aside menu start closed ----> 
+    
+    <!--- right content section --->
+    <div class="col-md-10 system2-right" id="itinerary-content"> 
+      
+      <!--- new Itinerary start --->
+      <div class="patientinfodivs1" id="firstimpression3">
+        <div class="new-itinerary"> 
+          <!-- // overview top nav // -->
+          <ul class="nav navbar-nav overview-topnav">
+            <li class="active"> <a href="#"> Today </a> </li>
+            <li> <a href="#"> Week </a> </li>
+            <li> <a href="#"> Month </a> </li>
+          </ul>
+          <div class="itinerary-menu">
+            <div class="col-md-12">
+              <ul class="nav navbar-nav">
+                <li class="quick-action"><a href="#"> Quick Actions</a>
+                  <ul class="sub-menu">
+                    <li> <a href="#"> Create </a> </li>
+                    <li> <a href="#"> Members </a> </li>
+                    <li> <a href="#"> Reports </a> </li>
+                  </ul>
+                </li>
+                <li class="quick-report"><a href="#">Quick Reports</a>
+                  <ul class="sub-menu">
+                    <li> <a href="#"> Members </a> </li>
+                    <li> <a href="#"> Reports</a> </li>
+                    <li> <a href="#"> Create </a> </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="advance-Search" id="hide"> <a class="btn" href="#"> Advanced Search </a> </div>
+              <div id="firstimpression" class="patientinfodivs advance-none">
+                <form class="bf-example" id="searching-input">
+                  <div class="row">
+                    <div class="col-lg-1">
+                      <input type="text" placeholder="Itinerary #" class="form-control">
+                    </div>
+                    <div class="col-lg-3">
+                      <input type="text" placeholder="Member" class="form-control">
+                    </div>
+                    <div class="col-lg-3">
+                      <input type="text" placeholder="Tags" class="form-control">
+                    </div>
+                    <div class="col-lg-2"> <span class="Start"> Start </span>
+                      <input type="text" placeholder="" id="datepicker3" class="form-control">
+                    </div>
+                    <div class="col-lg-3"> <span class="end"> end </span>
+                      <input type="text" placeholder="" id="datepicker4" class="form-control">
+                      <input type="button" class="advance-search1" value="search"/>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- new Itinerary start end ---> 
+      
+      <!-- // knob slider-cont // -->
+      <div class="row slider-cont"> 
+        
+        <!-- // knob slider1 // -->
+        <div class="col-lg-3">
+          <div class="knob-cont">
+            <input class="knob" data-width="90%" value="11">
+          </div>
+          <div class="title-buttons"> Golf
+            <p> <a href="#" class="add-gp-button"></a> <span> 11/200 </span> </p>
+          </div>
+          <div  class="bf-example knob-table">
+            <ul>
+              <li> <img src="images/system2_event.png"/> </li>
+              <li> <img src="images/system2_time.png"/> </li>
+              <li> <img src="images/system2_itineiary.png"/> </li>
+              <li> <img src="images/system2_user.png"/> </li>
+            </ul>
+            <div class="content">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 07:30AM</td>
+                    <td class="blue">1233</td>
+                    <td> Jones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 07:30AM</td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M</td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1908 </td>
+                    <td> Thomas, N </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1233 </td>
+                    <td> Jones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1233 </td>
+                    <td> ones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!-- // knob slider2 // -->
+        <div class="col-lg-3">
+          <div class="knob-cont">
+            <input class="knob" data-width="90%" value="69">
+          </div>
+          <div class="title-buttons"> Meals
+            <p> <a href="#" class="add-gp-button"></a> <span> 69/150 </span> </p>
+          </div>
+          <div class="bf-example knob-table">
+            <ul>
+              <li> <img src="images/system2_event.png"/> </li>
+              <li> <img src="images/system2_time.png"/> </li>
+              <li> <img src="images/system2_itineiary.png"/> </li>
+              <li> <img src="images/system2_user.png"/> </li>
+            </ul>
+            <div class="content">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 07:30AM</td>
+                    <td class="blue">1233</td>
+                    <td> Jones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 07:30AM</td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M</td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1908 </td>
+                    <td> Thomas, N </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1233 </td>
+                    <td> Jones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1233 </td>
+                    <td> ones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!-- // knob slider3 // -->
+        <div class="col-lg-3">
+          <div class="knob-cont">
+            <input class="knob" data-width="90%" value="20">
+          </div>
+          <div class="title-buttons title-buttons-cont"> Events
+            <p> <a href="#" class="add-gp-button"></a> <span> </span> </p>
+          </div>
+          <div class="bf-example knob-table">
+            <ul>
+              <li> <img src="images/system2_event.png"/> </li>
+              <li> <img src="images/system2_time.png"/> </li>
+              <li> <img src="images/system2_itineiary.png"/> </li>
+              <li> <img src="images/system2_user.png"/> </li>
+            </ul>
+            <div class="content">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 07:30AM</td>
+                    <td class="blue">1233</td>
+                    <td> Jones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 07:30AM</td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M</td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1908 </td>
+                    <td> Thomas, N </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1233 </td>
+                    <td> Jones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1233 </td>
+                    <td> ones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!-- // knob slider4 // -->
+        <div class="col-lg-3">
+          <div class="knob-cont">
+            <input class="knob" data-width="90%" value="36">
+          </div>
+          <div class="title-buttons title-buttons-cont"> Events
+            <p> <a href="#" class="add-gp-button"></a> <span> </span> </p>
+          </div>
+          <div class="bf-example knob-table">
+            <ul>
+              <li> <img src="images/system2_event.png"/> </li>
+              <li> <img src="images/system2_time.png"/> </li>
+              <li> <img src="images/system2_itineiary.png"/> </li>
+              <li> <img src="images/system2_user.png"/> </li>
+            </ul>
+            <div class="content">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 07:30AM</td>
+                    <td class="blue">1233</td>
+                    <td> Jones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 07:30AM</td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M</td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1908 </td>
+                    <td> Thomas, N </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1233 </td>
+                    <td> Jones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1233 </td>
+                    <td> ones, R </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                  <tr>
+                    <td> 11/19</td>
+                    <td> 11:30AM </td>
+                    <td class="blue"> 1341 </td>
+                    <td> Green, M </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!-- // bottom divider // -->
+        <div class="divider-bottom"> </div>
+        
+        <!-- // Accommodations // -->
+        <div class="row accommodations-cont">
+          <h4> Today&#39;s Accommodations <a class="added-no" href="#"> 03 </a> <a class="add-gp-button" href="#"> </a> </h4>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th> Date </th>
+                <th> Guest / s </th>
+                <th>Area</th>
+                <th># Rooms</th>
+                <th> # Beds</th>
+                <th> cxv</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="">
+                <td class="blue"> 1233 </td>
+                <td>11/19 > 11/22</td>
+                <td> Jones, Robert </td>
+                <td> Flower Lodge </td>
+                <td class="blue"> 1</td>
+                <td> 1 </td>
+                <td><input type="button" class="accomodations-seach" name=""/></td>
+              </tr>
+              <tr class="graey-color">
+                <td class="blue"> 1341 </td>
+                <td> 11/19 > 11/20 </td>
+                <td> Green, Maria </td>
+                <td> The Metropolitan Lodging Block </td>
+                <td class="blue"> 3</td>
+                <td> 12 </td>
+                <td><input type="button" class="accomodations-seach" name=""/></td>
+              </tr>
+              <tr>
+                <td class="blue"> 1908 </td>
+                <td> 11/19 > 11/23 </td>
+                <td> Thomas, Nicholas </td>
+                <td> The Countryside Lodging Block </td>
+                <td class="blue"> 5 </td>
+                <td> 20 </td>
+                <td><input type="button" class="accomodations-seach" name=""/></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--- end Accommodations ---> 
+      </div>
+      <!--- end knob slider-cont ---> 
+      
+    </div>
+  </div>
+</div>
+<!--- main content end ---> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.icheck.js"></script> 
+<script src="js/jquery-1.10.1.min.js"></script> 
+<script src="js/bootstrap-carousel.js"></script> 
+<script src="js/bootstrap-transition.js"></script> 
+<script src="js/head.js"></script> 
+<script src="js/bootstrap.js"> </script> 
+<script src="js/jquery.mCustomScrollbar.js"> </script> 
+<script src="js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="js/jquery.knob.js"></script> 
+<script>
+            $(function($) {
+
+                $(".knob").knob({
+                    change : function (value) {
+                        //console.log("change : " + value);
+                    },
+                    release : function (value) {
+                        //console.log(this.$.attr('value'));
+                        console.log("release : " + value);
+                    },
+                    cancel : function () {
+                        console.log("cancel : ", this);
+                    },
+                    draw : function () {
+
+                        // "tron" case
+                        if(this.$.data('skin') == 'tron') {
+
+                            var a = this.angle(this.cv)  // Angle
+                                , sa = this.startAngle          // Previous start angle
+                                , sat = this.startAngle         // Start angle
+                                , ea                            // Previous end angle
+                                , eat = sat + a                 // End angle
+                                , r = 1;
+
+                            this.g.lineWidth = this.lineWidth;
+
+                            this.o.cursor
+                                && (sat = eat - 0.3)
+                                && (eat = eat + 0.3);
+
+                            if (this.o.displayPrevious) {
+                                ea = this.startAngle + this.angle(this.v);
+                                this.o.cursor
+                                    && (sa = ea - 0.3)
+                                    && (ea = ea + 0.3);
+                                this.g.beginPath();
+                                this.g.strokeStyle = this.pColor;
+                                this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
+                                this.g.stroke();
+                            }
+
+                            this.g.beginPath();
+                            this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
+                            this.g.stroke();
+
+                            this.g.lineWidth = 2;
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.o.fgColor;
+                            this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                            this.g.stroke();
+
+                            return false;
+                        }
+                    }
+                });
+
+                // Example of infinite knob, iPod click wheel
+                var v, up=0,down=0,i=0
+                    ,$idir = $("div.idir")
+                    ,$ival = $("div.ival")
+                    ,incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
+                    ,decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
+                $("input.infinite").knob(
+                                    {
+                                    min : 0
+                                    , max : 20
+                                    , stopper : false
+                                    , change : function () {
+                                                    if(v > this.cv){
+                                                        if(up){
+                                                            decr();
+                                                            up=0;
+                                                        }else{up=1;down=0;}
+                                                    } else {
+                                                        if(v < this.cv){
+                                                            if(down){
+                                                                incr();
+                                                                down=0;
+                                                            }else{down=1;up=0;}
+                                                        }
+                                                    }
+                                                    v = this.cv;
+                                                }
+                                    });
+            });
+        </script>
+
+		
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $('.home-navigation').click(function(e){
+	e.preventDefault();
+	$('.patientinfodivs1').toggle();
+  });
+});
+</script> 
+
+
+<script>
+var $= jQuery.noConflict()
+
+$(document).ready(function(){
+$('.create-sub-menu').css({"display":"none"});
+  $("#hide1").click(function(){
+    $("#firstimpression1").toggle();
+    $(".slidingDiv").css("display","block");	
+  });
+});
+</script> 
+
+
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+$('.create-sub-menu').css({"display":"none"});
+  var counter =  1;
+  $("#hide").addClass('hide1');
+  $("#hide").click(function(e){
+	e.preventDefault();
+    $("#firstimpression").toggle();
+	if(counter%2 == 0)
+	{
+	$(this).removeClass('show');
+	$(this).addClass('hide1');
+	}
+	else
+	{
+	$(this).addClass('show');
+	$(this).removeClass('hide1');
+	}
+	counter++;
+  //  $(".slidingDiv, .create-sub-menu").css("display","block");
+  });
+  $('#create-menu').click(function(e){
+	e.preventDefault();
+	$('.create-sub-menu').toggle();
+  });
+});
+</script>
+
+
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $("#hide2").click(function(){
+    $("#firstimpression2").toggle();
+    $(".slidingDiv").css("display","block");
+  });
+});
+</script> 
+
+<!--Scrollbar--> 
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script>
+	var $= jQuery.noConflict()
+		(function($){
+			$(window).load(function(){
+				$(".content").mCustomScrollbar({
+					scrollButtons:{
+						enable:true
+					}
+				});
+				//ajax demo fn
+				$("a[rel='load-content']").click(function(e){
+					e.preventDefault();
+					var $this=$(this),
+						url=$this.attr("href");
+					$this.addClass("loading");
+					$.get(url,function(data){
+						$this.removeClass("loading");
+						$(".content .mCSB_container").html(data); //load new content inside .mCSB_container
+						$(".content").mCustomScrollbar("update"); //update scrollbar according to newly loaded content
+						$(".content").mCustomScrollbar("scrollTo","top",{scrollInertia:200}); //scroll to top
+					});
+				});
+				$("a[rel='append-content']").click(function(e){
+					e.preventDefault();
+					var $this=$(this),
+						url=$this.attr("href");
+					$this.addClass("loading");
+					$.get(url,function(data){
+						$this.removeClass("loading");
+						$(".content .mCSB_container").append(data); //append new content inside .mCSB_container
+						$(".content").mCustomScrollbar("update"); //update scrollbar according to newly appended content
+						$(".content").mCustomScrollbar("scrollTo","h2:last",{scrollInertia:2500,scrollEasing:"easeInOutQuad"}); //scroll to appended content
+					});
+				});
+			});
+		})(jQuery);
+	</script>
+</body>
+</html>

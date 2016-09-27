@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Golf Reservation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" media="screen">
+<link href="bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+<link href="css/bootflat.css" rel="stylesheet" media="screen">
+<link href="css/bootflat-extensions.css" rel="stylesheet" media="screen">
+<link href="css/bootflat-square.css" rel="stylesheet" media="screen">
+<link href="css/style.css" rel="stylesheet" media="screen">
+<link href="css/chosen.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="js/jquery-ui.css">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+      <![endif]-->
+
+</head>
+<body>
+
+<!--- header nav ---->
+<header role="banner" class="navbar navbar-inverse" id="header">
+  <div class="navbar-header"> <a class="navbar-brand" href="../index.html"> GOLF <span> CLUB </span> </a>
+    <div class="nav-button" id="hide2"> <img src="images/gears.png"> </div>
+  </div>
+  <div id="firstimpression2" class="patientinfodivs nav-button-inner">
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <form class="bf-example bf-example-control-sizing">
+          <div class="form-search search-only">
+            <input type="text" class="form-control search-query">
+          </div>
+        </form>
+      </li>
+      <li class="active"><a href="#"> Welcome Admin </a></li>
+      <li><a href="#"> Account </a></li>
+      <li class="logout"><a href="#"> Logout</a></li>
+      <li class="gears"><a href="#"> <img src="images/gears.png"> </a> </li>
+    </ul>
+  </div>
+</header>
+<!-- header nav closed -->
+
+<div class="content">
+<div class="row">
+
+<!--- aside menu start ---->
+
+<div class="col-md-2" id="aside">
+  <div class="home-navigation"> Navigation </div>
+  <div id="firstimpression1" class="patientinfodivs1">
+    <ul class="nav nav-list nav-list-panel" >
+          <li class="dashbord"><a href="#"> Dashboard </a></li>
+          <li class="active itineraries" id="create-menu"> <a href="#"> Itineraries </a> </li>
+		   <li class="create-sub-menu" id="create-sub-menu">
+		  <ul>
+          <li class="overview"> Overview </li>
+          <li class="nav-header"> Create </li>
+		  </ul>
+		  </li>
+		  
+          <li class="golf"><a href="#"> Golf </a> </li>
+          <li class="meals"><a href="#"> Meals </a></li>
+          <li class="events"><a href="#"> Events </a></li>
+          <li class="transport"><a href="#"> Transport </a></li>
+          <li class="accomodations"><a href="#"> Accomodations </a></li>
+          <li class="reports"><a href="#"> Reports </a></li>
+          <li class="members"><a href="#"> Members </a></li>
+		 
+		  
+        </ul>
+  </div>
+</div>
+<!--- aside menu start closed ----> 
+
+<!--- right content section --->
+<div class="col-md-10" id="itinerary-content">
+
+<!--- new Itinerary start --->
+<div class="patientinfodivs1" id="firstimpression3">
+  <div class="new-itinerary">
+    <h1> Create a new Itinerary </h1>
+    <div class="itinerary-menu">
+      <div class="col-md-12">
+        <ul class="nav navbar-nav">
+          <li class="quick-action"><a href="#"> Quick Actions</a>
+            <ul class="sub-menu">
+              <li> <a href="#"> Create </a> </li>
+              <li> <a href="#"> Members </a> </li>
+              <li> <a href="#"> Reports </a> </li>
+            </ul>
+          </li>
+          <li class="quick-report"><a href="#">Quick Reports</a>
+            <ul class="sub-menu">
+              <li> <a href="#"> Members </a> </li>
+              <li> <a href="#"> Reports</a> </li>
+              <li> <a href="#"> Create </a> </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="advance-Search" id="hide"> <a class="btn" href="#"> Advanced Search </a> </div>
+        <div id="firstimpression" class="patientinfodivs advance-none">
+          <form class="bf-example" id="searching-input">
+            <div class="row">
+              <div class="col-lg-1">
+                <input type="text" placeholder="Itinerary #" class="form-control">
+              </div>
+              <div class="col-lg-3">
+                <input type="text" placeholder="Member" class="form-control">
+              </div>
+              <div class="col-lg-3">
+                <input type="text" placeholder="Tags" class="form-control">
+              </div>
+              <div class="col-lg-2"> <span class="Start"> Start </span>
+                <input type="text" placeholder="" id="datepicker3" class="form-control">
+              </div>
+              <div class="col-lg-3"> <span class="end"> end </span>
+                <input type="text" placeholder="" id="datepicker4" class="form-control">
+                <input type="button" class="advance-search1" value="search"/>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--- new Itinerary start end ---> 
+
+<!--- detail content sections --->
+<div class="detail">
+
+<!-- detail top -->
+<div class="row detail-top">
+
+<!--- itinerary top left --> 
+		 <div class="col-md-6">
+          <div class="itinerary-title"> Itinerary #35435212 </div>
+		  <a href="#" class="custom-button view-history"> VIEW HISTORY OF CHANGES </a>
+		  </div>
+		 <!--itinerary top left end --> 
+		  
+		  
+		  <!--- itinerary top right --> 
+		 <div class="col-md-6 detail-top-right">
+		  <ul class="nav navbar-nav"> 
+		  <li class="edit-it"> <a href="#"> EDIT </a> </li>
+		  <li class="cancel-it"> <a href="#"> CANCEL ITINERARY </a> </li>
+		  </ul> 
+		  
+		  <ul class="nav navbar-nav pull-right user-info"> 
+		  <li> <a href="#"> Print Itinerary  </a> </li>
+		  <li class="sep"> | </li> 
+		  <li> <a href="#"> Email Member </a> </li>
+		  </ul>
+		  </div>
+		 <!-- end itinerary top right --> 
+		  
+		  
+		  </div>
+		  <!--- deatail top end --->
+		
+<!-- // detail middle // -->		
+	  <div class="detail-middle">
+	  <div class="row">
+	  <!-- // People into itinerary // -->
+	  <div class="col-md-4 membership">
+	 <h4> People into itinerary <a href="#" class="added-no"> 7 </a> </h4>
+	<ul class="nav nav-list nav-list-panel">
+                 
+				 <li class="yellow-star"> 
+				  <a href="#"> <i class="fa fa-star"></i> <span> Fullenwider, Shannon </span> </a> 
+				 </li>
+				 
+                  <li class="white">  <a href="#"> <img src="images/m-user.png"> <span>  Varnadoe, Joey </span> </a> </li>
+				  <li>  <a href="#"> <img src="images/m-user.png"> <span> Moreton, Shaun </span>  </a> </li>
+				   <li class="white">  <a href="#"> <img src="images/m-user.png"> <span> Haverstock, Alfonso </span>  </a> </li>
+				    <li>  <a href="#"> <img src="images/off-user.png"> <span> Franzoni, Arturo </span> </a> </li>
+					 <li class="white">  <a href="#"> <img src="images/off-user.png"> <span> Arbeiter, Cameron </span> </a> </li>
+					  <li>  <a href="#"> <img src="images/off-user.png"> <span> Buresh, Damon </span>  </a> </li>
+                  
+                </ul>
+	  
+	  
+	  </div>
+ <!-- People into itinerary end -->	  
+	  
+ <!-- General Info  -->	  
+<div class="col-md-7 general-info">
+	<h4> General Info </h4>
+	<div class="exect-time"> <img src="images/exect-date.png"> Tuesday, November 02, 2014  to Thursday, November 04, 2014 </div>
+	<ul class="nav navbar-nav add-tag">
+                  <li class="title"> Tags: </li>
+                  <li> <span> Important </span> <i class="fa fa-times-circle"></i> </li>
+                  <li> <span> VIP Group </span> <i class="fa fa-times-circle"></i> </li>
+                  <li> <span> Fullenwinder </span> <i class="fa fa-times-circle"></i> </li>
+                </ul>
+	  
+	  <h4> Description </h4>
+	  <p> Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. </p> 
+	  
+	  </div>
+  
+ <!-- General Info  end -->	 
+	  </div>
+
+    </div> <!-- end detail middle -->
+
+<!-- // View Itinerary tab // -->	
+<div id="tab-cont">
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+								
+								<ul class="nav nav-tabs navbar-nav main-tab system-tab">
+									<li class="active"><a href="#people-gp" data-toggle="tab"> Golf <span class="detail-arrow"></span></a></li>
+									<li class="tab-icon"> <a href="#tabmeals" data-toggle="tab">Meals<span class="detail-arrow"></span></a></li>
+									<li> <a href="#tabevents" data-toggle="tab">Events<span class="detail-arrow"></span></a></li>
+									<li class="tab-icon"> <a href="#tabtransport" data-toggle="tab">Transport<span class="detail-arrow"></span></a></li>
+									<li> <a href="#tabaccommodations" data-toggle="tab"> Accommodations <span class="detail-arrow"></span></a></li>	
+								</ul>
+						
+</div>
+</div>	
+     <!-- end View Itinerary tab -->
+
+<!-- // people-gp FIRST TAB // -->	
+<div class="tab-content">
+<div class="bf-example tab-pane active" id="people-gp">
+<div class="detailsub-tab">
+	<ul class="nav navbar-nav sub-tab">
+		<li class="active"><a href="#"> Group 1 </a></li>
+		<li> <a href="#"> Group 2 </a></li>
+	</ul>
+</div>
+<div class="dtabs-inner">
+<h4> People in this group </h4>
+					    <table class="table">
+					        <thead>
+					            <tr>
+					                <th class="aligin-left"> Members/Guests </th>
+					                <th> Course Transportation </th>
+					                <th> Group Caddies </th>
+					                <th> Starting Hole </th>
+									<th> Start Date</th>
+					            </tr>
+					        </thead>
+					        <tbody>
+					            <tr class="yellow-star">
+					                 <td class="aligin-left"> <i class="fa fa-star"></i>  Fullenwider, Shannon</td>
+					                <td> Walk </td>
+					                <td> John Doe</td>
+					                <td> 01 </td>
+									 <td> 11/12/2013 @ 09:00AM </td>
+					            </tr>
+					            <tr>
+					                <td class="aligin-left"> <img src="images/off-user.png"> Franzoni, Arturo </td>
+					                <td> Walk </td>
+					                <td> Oliver Kiddy </td>
+					                <td></td>
+					                <td> </td>
+					            </tr>
+					            <tr>
+					               <td class="aligin-left"> <img src="images/off-user.png">  Arbeiter, Cameron </td>
+					                <td> Ride </td>
+					                <td></td>
+					                <td></td>
+					                <td></td>
+					            </tr>
+					        </tbody>
+					    </table>
+	
+	<!-- // notes and discussion // -->
+	<h4> Notes & Discussion </h4> 
+	<div class="note-dicusssion">
+	<ul class="nav navbar-nav">
+	<li> Initial Notes</li>
+	<li class="sep"> | </li>
+	<li> By: Douglas Morrison </li>
+	<li class="sep"> | </li>
+	<li> On: 10/11/2013  </li>
+	<li class="sep"> | </li>
+	<li> i  Initial notes cannot be edited or deleted  </li>
+	</ul>
+	<p> Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod.</p>
+	</div>
+	<!-- end note-dicusssion --> 
+	
+	<!-- // testimonial section // -->
+	<div class="row testimonial">
+	<div class="col-md-2">
+	<a href="#"> <img src="images/testimonial.png"> <span> Catherine C. </span> <span class="right-arrow">&nbsp; </span> </a>
+	
+	</div>
+	<div class="col-md-10"> 
+	<h5>  Wrote On: 10/11/2013 </h5>
+	<p> Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+	</div>
+
+	</div>
+	<!-- end testimonial section -->
+	
+	
+	
+	<!-- // add notes // -->
+	<div class="row add-notes">
+	<div class="col-md-7">
+	<textarea class="form-control form-control-square" placeholder="Add Notes"></textarea>
+	</div>
+	<div class="col-md-5"> 
+	<h5> Instructions before adding notes </h5>
+	<p> Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  </p> 
+	<input type="button" class="btn-primary post-note" value="POST NOTE" name=""/>
+
+	</div>
+
+</div>
+<!-- end add notes -->
+    	
+	</div>
+</div>
+ <!-- people-gp end FIRST TAB ENDS --> 	 
+<!-- MEALS TAB STARTS -->
+ <div class="tab-pane" id="tabmeals">
+ 
+  <div class="dtabs-inner">
+  
+  <div class="transport-detail meel-detail"> 
+  <div class="col-sm-4"> Meal Details <span class="h-notes"> Has Notes </span> </div>
+  <div class="col-sm-4"> 
+  <a href="#" class="meel-prev"> </a>
+  <a href="#" class="meel-next"> </a>
+   <span class="static-text"> Jump </span>
+   
+   <input type="text" class="form-control" id="datepicker12" placeholder="">
+             
+  </div>
+    <div class="col-sm-4"> Itinerary #13543524 | 7 People Group  </div>
+  
+  </div>
+
+ <table class="table transport-tabular-data meal-tabular-data">
+					        <thead>
+					            <tr>
+					                <th colspan="3"> 03/26 <a class="add-event"> &nbsp; </a> </th>
+					                <th class="light-grey" colspan="3"> 03/27 <a class="add-event"> &nbsp; </a> </th>
+					                <th colspan="3"> 03/28  <a class="add-event"> &nbsp; </a> </th>
+					            </tr>
+					        </thead>
+							
+					        <tbody>
+							
+							<tr>
+					                <td width="8%">
+									11:30AM
+									</td>
+									
+					                <td width="8%">
+									<span class="main-table"> Main </br> Table 4 </span> 
+									<span class="total-member accomodation-loadge2"> 4/4 </span>
+									<span> <img src="images/notes.png"/> </span>						 
+									</td>
+									
+									
+					                <td width="17.33%" class="meal-member">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso </span>
+									
+									
+									</td>
+									
+									
+									<td class="light-grey1" width="8%">
+									11:30AM
+									</td>
+									
+					                <td  class="light-grey1" width="8%">
+									<span class="main-table"> Main </br> Table 4 </span> 
+									<span class="total-member accomodation-loadge2"> 4/4 </span>
+														 
+									</td>
+									
+									
+					                <td  width="17.33%" class="meal-member light-grey1">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso </span>
+									
+									
+									</td>
+									
+									
+									
+									<td width="8%">
+									11:30AM
+									</td>
+									
+					                <td width="8%">
+									<span class="main-table"> Main </br> Table 4 </span> 
+									<span class="total-member accomodation-loadge2"> 4/4 </span>
+									<span> <img src="images/notes.png"/> </span>						 
+									</td>
+									
+									
+					                <td width="17.33%" class="meal-member">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso </span>
+									
+									
+									</td>
+									
+									
+							</tr>
+						
+
+		<tr>
+					                <td>
+									11:30AM
+									</td>
+									
+					                <td>
+									<span class="main-table"> Main </br> Table 6 </span> 
+									<span class="total-member"> 4/6 </span>
+														 
+									</td>
+									
+									
+					                <td  class="meal-member">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso </span>
+									
+									
+									</td>
+									
+									
+									<td class="light-grey1">
+									11:30AM
+									</td>
+									
+					                <td class="light-grey1">
+									<span class="main-table"> Main </br> Table 6 </span> 
+									<span class="total-member"> 4/6 </span>
+									<span> <img src="images/notes.png"/> </span>						 
+									</td>
+									
+									
+					                <td class="meal-member light-grey1">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso </span>
+									
+									
+									</td>
+									
+									
+									
+									<td>
+									11:30AM
+									</td>
+									
+					                <td>
+									<span class="main-table"> Main </br> Table 6 </span> 
+									<span class="total-member"> 4/6 </span>
+													 
+									</td>
+									
+									
+					                <td  class="meal-member">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso </span>
+									
+									
+									</td>
+									
+									
+							</tr>
+												
+
+		<tr>
+					                <td>
+									6:30PM
+									</td>
+									
+					                <td>
+									<span class="main-table"> Lounge </br> Table 8 </span> 
+									<span class="total-member"> 3/4 </span>
+															 
+									</td>
+									
+									
+					                <td class="meal-member">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									
+									
+									
+									</td>
+									
+									
+									<td class="light-grey1">
+									6:30PM
+									</td>
+									
+					                <td class="light-grey1">
+									<span class="main-table"> Lounge </br> Table 8 </span>
+									<span class="total-member"> 3/4 </span>
+														 
+									</td>
+									
+									
+					                <td class="meal-member light-grey1">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									
+									
+									
+									</td>
+									
+									
+									
+									<td>
+									6:30PM
+									</td>
+									
+					                <td>
+									<span class="main-table"> Lounge </br> Table 8 </span> 
+									<span class="total-member"> 3/4 </span>
+															 
+									</td>
+									
+									
+					                <td class="meal-member">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+								
+									
+									
+									</td>
+									
+									
+							</tr>
+														
+					        
+		<tr>
+					                <td>
+									8:30PM
+									</td>
+									
+					                <td>
+									<span class="main-table"> Lounge </br> Table 6 </span> 
+									<span class="total-member accomodation-loadge2"> 6/6 </span>
+															 
+									</td>
+									
+									
+					                <td class="meal-member">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso </span>
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									
+									</td>
+									
+									
+									<td class="light-grey1">
+									8:30PM
+									</td>
+									
+					                <td class="light-grey1">
+									<span class="main-table"> Lounge </br> Table 6</span> 
+									<span class="total-member accomodation-loadge2"> 6/6 </span>
+															 
+									</td>
+									
+									
+					                <td class="meal-member light-grey1">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso </span>
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									
+									</td>
+									
+									
+									
+									<td>
+									8:30PM
+									</td>
+									
+					                <td>
+									<span class="main-table"> Lounge </br> Table 6</span> 
+									<span class="total-member accomodation-loadge2"> 6/6 </span>
+															 
+									</td>
+									
+									
+					                <td class="meal-member">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso </span>
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									
+									</td>
+									
+									
+							</tr>
+														
+		
+
+</tbody>
+					    </table>
+						
+	
+	<!-- // notes and discussion // -->
+	<h4> Notes & Discussion </h4> 
+	<div class="note-dicusssion">
+	<ul class="nav navbar-nav">
+	<li> Initial Notes</li>
+	<li class="sep"> | </li>
+	<li> By: Douglas Morrison </li>
+	<li class="sep"> | </li>
+	<li> On: 10/11/2013  </li>
+	<li class="sep"> | </li>
+	<li> i  Initial notes cannot be edited or deleted  </li>
+	</ul>
+	<p> Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod.</p>
+	</div>
+	<!-- end note-dicusssion --> 
+	
+	<!-- // testimonial section // -->
+	<div class="row testimonial">
+	<div class="col-md-2">
+	<a href="#"> <img src="images/testimonial.png"> <span> Catherine C. </span> <span class="right-arrow">&nbsp; </span> </a>
+	
+	</div>
+	<div class="col-md-10"> 
+	<h5>  Wrote On: 10/11/2013 </h5>
+	<p> Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+	</div>
+
+	</div>
+	<!-- end testimonial section -->
+	
+	
+	
+	<!-- // add notes // -->
+	<div class="row add-notes">
+	<div class="col-md-7">
+	<textarea class="form-control form-control-square" placeholder="Add Notes"></textarea>
+	</div>
+	<div class="col-md-5"> 
+	<h5> Instructions before adding notes </h5>
+	<p> Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  </p> 
+	<input type="button" class="btn-primary post-note" value="POST NOTE" name=""/>
+
+	</div>
+
+</div>
+<!-- end add notes -->
+    	
+	</div>
+  
+  
+
+ </div>
+ <!-- MEALS TAB ENDS -->
+ <!-- EVENTS TAB STARTS -->
+  <div class="tab-pane" id="tabevents">
+  
+  
+  <div class="dtabs-inner">
+  
+  <div class="transport-detail"> 
+  <div class="col-sm-6"> Event Details <span class="h-notes"> Has Notes </span> </div>
+    <div class="col-sm-6"> Itinerary #13543524 | 7 People Group </div>
+  
+  </div>
+  
+<!-- accoomodation lodge -->
+<div class="event-lodge">
+
+<div class="row">
+   <div class="col-sm-6">
+   <div class="loadge-topbar"> Event Name goes here <time> 10:00AM - 11:00AM </time> </div>
+   
+  
+  <table class="table">
+					        
+					            <tr >
+					              
+					                <td width="30%" class="event-location">
+									<span> 03/26 </span>
+									<span class="location-guide"> Location 1   </span>
+									
+									</td>
+					                <td width="30%">
+									<span> Asset 1 </span>
+									<span> Asset 2 </span>
+									<span> Asset 3 </span>
+									
+									</td>
+					                <td width="40%" class="last">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey  </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso  </span>
+									</td>
+									
+					            </tr>
+  
+                             
+  </table>
+  
+  
+  </div>
+   
+     <div class="col-sm-6">
+   <div class="loadge-topbar"> Event Name goes here <time> 10:00AM - 11:00AM </time> </div>
+   
+  
+  <table class="table">
+					        
+					            <tr >
+					              
+					                <td width="30%" class="event-location">
+									<span> 03/26 </span>
+									<span class="location-guide"> Location 1   </span>
+									
+									</td>
+					                <td width="30%">
+									<span> Asset 1 </span>
+									<span> Asset 2 </span>
+									<span> Asset 3 </span>
+									
+									</td>
+					                <td width="40%" class="last">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey  </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso  </span>
+									</td>
+									
+					            </tr>
+  
+                             
+  </table>
+  
+  
+  </div>
+   
+</div>
+
+<div class="row">
+   <div class="col-sm-6">
+   <div class="loadge-topbar"> Event Name goes here <time> 10:00AM - 11:00AM </time> </div>
+   
+  
+  <table class="table">
+					        
+					            <tr >
+					              
+					                <td width="30%" class="event-location">
+									<span> 03/26 </span>
+									<span class="location-guide"> Location 1   </span>
+									
+									</td>
+					                <td width="30%">
+									<span> Asset 1 </span>
+									<span> Asset 2 </span>
+									<span> Asset 3 </span>
+									
+									</td>
+					                <td width="40%" class="last">
+									
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey  </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso  </span>
+									</td>
+									
+					            </tr>
+  
+                             
+  </table>
+  
+  
+  </div>
+   
+
+</div>
+	</div>  
+
+	
+	<!-- // notes and discussion // -->
+	<h4> Notes & Discussion </h4> 
+	<div class="note-dicusssion">
+	<ul class="nav navbar-nav">
+	<li> Initial Notes</li>
+	<li class="sep"> | </li>
+	<li> By: Douglas Morrison </li>
+	<li class="sep"> | </li>
+	<li> On: 10/11/2013  </li>
+	<li class="sep"> | </li>
+	<li> i  Initial notes cannot be edited or deleted  </li>
+	</ul>
+	<p> Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod.</p>
+	</div>
+	<!-- end note-dicusssion --> 
+	
+	<!-- // testimonial section // -->
+	<div class="row testimonial">
+	<div class="col-md-2">
+	<a href="#"> <img src="images/testimonial.png"> <span> Catherine C. </span> <span class="right-arrow">&nbsp; </span> </a>
+	
+	</div>
+	<div class="col-md-10"> 
+	<h5>  Wrote On: 10/11/2013 </h5>
+	<p> Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+	</div>
+
+	</div>
+	<!-- end testimonial section -->
+	
+	
+	
+	<!-- // add notes // -->
+	<div class="row add-notes">
+	<div class="col-md-7">
+	<textarea class="form-control form-control-square" placeholder="Add Notes"></textarea>
+	</div>
+	<div class="col-md-5"> 
+	<h5> Instructions before adding notes </h5>
+	<p> Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  </p> 
+	<input type="button" class="btn-primary post-note" value="POST NOTE" name=""/>
+
+	</div>
+
+</div>
+<!-- end add notes -->
+    	
+	</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+   <!-- EVENTS TAB ENDS -->
+   <!-- TRANSPORT TAB STARTS -->
+   
+   
+  <div class="tab-pane" id="tabtransport">
+  
+  <div class="dtabs-inner">
+  
+  <div class="transport-detail"> 
+  <div class="col-sm-6"> Transport Details <span class="h-notes"> Has Notes </span> </div>
+    <div class="col-sm-6"> Itinerary #13543524 | 7 People Group  </div>
+  
+  </div>
+
+					    <table class="table transport-tabular-data">
+					        <thead>
+					            <tr>
+					                <th width="5%"> Day </th>
+					                <th width="12%"> Vehicle </th>
+					                <th width="12%"> Start Time </th>
+					                <th width="12%"> End Time </th>
+									<th width="14%"> Driver </th>
+                                    <th width="5%" class="light-blue"> Airline </th>
+					                <th width="10%" class="light-blue"> Flight # </th>
+					                <th width="12%" class="light-blue"> Departs </th>
+									<th width="18%" class="light-green"> People on vehicle </th>
+					            </tr>
+					        </thead>
+							
+					        <tbody>
+							
+							<tr>
+					                <td> <span class="date-note"> <img src="images/notes.png"/> </span> 03/29  </td>
+					                <td> GMC 1 </td>
+					                <td> 9:00AM </td>
+									<td> 10:00AM </td>
+                                    <td> John Doe </td>
+					                <td class="light-blue1"> AA </td>
+					                <td class="light-blue1"> 1234 </td>
+									<td class="light-blue1"> 12:30AM </td>
+									<td class="light-green1">
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									<span> Haverstock, Alfonso </span>
+									</td>
+							</tr>
+							
+							<tr>
+					                <td> 03/29 </td>
+					                <td> Private </td>
+					                <td> 9:00AM </td>
+									<td> 10:00AM </td>
+                                    <td> John Doe </td>
+					                <td class="light-blue1"> Lear </td>
+					                <td class="light-blue1"> ---- </td>
+									<td class="light-blue1"> 1:00PM </td>
+									<td class="light-green1"> 
+									<span> Fullenwider, Shannon </span>
+									<span> Varnadoe, Joey </span>
+									<span> Moreton, Shaun </span>
+									
+									</td>
+							</tr>
+					            
+					        </tbody>
+					    </table>
+						
+	
+	<!-- // notes and discussion // -->
+	<h4> Notes & Discussion </h4> 
+	<div class="note-dicusssion">
+	<ul class="nav navbar-nav">
+	<li> Initial Notes</li>
+	<li class="sep"> | </li>
+	<li> By: Douglas Morrison </li>
+	<li class="sep"> | </li>
+	<li> On: 10/11/2013  </li>
+	<li class="sep"> | </li>
+	<li> i  Initial notes cannot be edited or deleted  </li>
+	</ul>
+	<p> Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod.</p>
+	</div>
+	<!-- end note-dicusssion --> 
+	
+	<!-- // testimonial section // -->
+	<div class="row testimonial">
+	<div class="col-md-2">
+	<a href="#"> <img src="images/testimonial.png"> <span> Catherine C. </span> <span class="right-arrow">&nbsp; </span> </a>
+	
+	</div>
+	<div class="col-md-10"> 
+	<h5>  Wrote On: 10/11/2013 </h5>
+	<p> Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+	</div>
+
+	</div>
+	<!-- end testimonial section -->
+	
+	
+	
+	<!-- // add notes // -->
+	<div class="row add-notes">
+	<div class="col-md-7">
+	<textarea class="form-control form-control-square" placeholder="Add Notes"></textarea>
+	</div>
+	<div class="col-md-5"> 
+	<h5> Instructions before adding notes </h5>
+	<p> Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  </p> 
+	<input type="button" class="btn-primary post-note" value="POST NOTE" name=""/>
+
+	</div>
+
+</div>
+<!-- end add notes -->
+    	
+	</div>
+  
+  
+  
+  </div>
+  <!-- TRANSPORT TAB ends -->
+  
+  <!-- accommodations TAB STARTS -->
+  <div class="tab-pane" id="tabaccommodations">
+ 
+  
+  <div class="dtabs-inner">
+  
+  <div class="transport-detail"> 
+  <div class="col-sm-6"> Accommodation Details <span class="h-notes"> Has Notes </span> </div>
+    <div class="col-sm-6"> Itinerary #13543524 | 7 People Group </div>
+  
+  </div>
+  
+<!-- accoomodation lodge -->
+<div class="acoomodation-lodge">
+   <div class="col-sm-3">
+   <div class="loadge-topbar"> Lodge 1 - Room 131 <span class="total-member">3/4 </span> </div>
+   <div class="edit-event"> <img src="images/accomo-event.png"/> <span class="accomo-date"> 03/26 to 03/30 </span> 
+   <a class="add-event"> &nbsp; </a> 
+   </div>
+   <ul class="accomo-menu">
+   <li> Fullenwider, Shannon </li>
+   <li> Varnadoe, Joey  </li>
+   <li> Moreton, Shaun </li>
+  </ul> 
+  </div>
+   
+   
+   <div class="col-sm-3">
+   <div class="loadge-topbar"> Lodge 2 - Room 234 <span class="total-member accomodation-loadge2"> 4/4 </span> </div>
+   <div class="edit-event"> <img src="images/accomo-event.png"/> <span class="accomo-date"> 03/26 to 03/30 </span> 
+   <a class="add-event"> &nbsp; </a> 
+   </div>
+   <ul class="accomo-menu">
+   <li> Fullenwider, Shannon </li>
+   <li> Varnadoe, Joey  </li>
+   <li> Moreton, Shaun </li>
+    <li>Haverstock, Alfonso  </li>
+  </ul> </div>
+   
+
+	</div>  
+
+	
+	<!-- // notes and discussion // -->
+	<h4> Notes & Discussion </h4> 
+	<div class="note-dicusssion">
+	<ul class="nav navbar-nav">
+	<li> Initial Notes</li>
+	<li class="sep"> | </li>
+	<li> By: Douglas Morrison </li>
+	<li class="sep"> | </li>
+	<li> On: 10/11/2013  </li>
+	<li class="sep"> | </li>
+	<li> i  Initial notes cannot be edited or deleted  </li>
+	</ul>
+	<p> Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod.</p>
+	</div>
+	<!-- end note-dicusssion --> 
+	
+	<!-- // testimonial section // -->
+	<div class="row testimonial">
+	<div class="col-md-2">
+	<a href="#"> <img src="images/testimonial.png"> <span> Catherine C. </span> <span class="right-arrow">&nbsp; </span> </a>
+	
+	</div>
+	<div class="col-md-10"> 
+	<h5>  Wrote On: 10/11/2013 </h5>
+	<p> Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+	</div>
+
+	</div>
+	<!-- end testimonial section -->
+	
+	
+	
+	<!-- // add notes // -->
+	<div class="row add-notes">
+	<div class="col-md-7">
+	<textarea class="form-control form-control-square" placeholder="Add Notes"></textarea>
+	</div>
+	<div class="col-md-5"> 
+	<h5> Instructions before adding notes </h5>
+	<p> Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  </p> 
+	<input type="button" class="btn-primary post-note" value="POST NOTE" name=""/>
+
+	</div>
+
+</div>
+<!-- end add notes -->
+    	
+	</div>
+  
+  
+  
+  
+  
+  </div>
+   <!-- accommodations TAB ENDS -->
+	
+</div>
+<!-- TAB CONTENT ENDS -->
+</div>
+<!-- detail end --> 
+
+	
+</div>
+</div>
+</div>
+<!--- main content end ---> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.icheck.js"></script> 
+<script src="js/jquery-1.10.1.min.js"></script> 
+<script src="js/bootstrap-carousel.js"></script> 
+<script src="js/bootstrap-transition.js"></script> 
+<script src="js/head.js"></script> 
+<script src="js/bootstrap.js"> </script> 
+<script src="js/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+
+
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+$('.create-sub-menu').css({"display":"none"});
+  var counter =  1;
+  $("#hide").addClass('hide1');
+  $("#hide").click(function(e){
+	e.preventDefault();
+    $("#firstimpression").toggle();
+	if(counter%2 == 0)
+	{
+	$(this).removeClass('show');
+	$(this).addClass('hide1');
+	}
+	else
+	{
+	$(this).addClass('show');
+	$(this).removeClass('hide1');
+	}
+	counter++;
+   // $(".slidingDiv, .create-sub-menu").css("display","block");
+  });
+  $('#create-menu').click(function(e){
+	e.preventDefault();
+	$('.create-sub-menu').toggle();
+  });
+});
+</script>
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $('.home-navigation').click(function(e){
+	e.preventDefault();
+	$('.patientinfodivs1').toggle();
+  });
+});
+</script>
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $("#hide1").click(function(){
+    $("#firstimpression1").toggle();
+    $(".slidingDiv").css("display","block");
+  });
+});
+</script>
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $("#hide2").click(function(){
+    $("#firstimpression2").toggle();
+    $(".slidingDiv").css("display","block");
+  });
+});
+</script> 
+<script>
+$(document).ready(function(){
+  $("#hide1").click(function(){
+    $("#firstimpression3").show();
+  });
+});
+</script>
+<script>
+$('#system-tab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+   
+<script type="text/javascript">
+jQuery(document).ready(function(){
+  jQuery('#bxslider1').bxSlider();
+  jQuery('#bxslider2').bxSlider();
+  jQuery('#bxslider3').bxSlider();
+  jQuery('#bxslider4').bxSlider();
+  jQuery('#bxslider5').bxSlider();
+  jQuery('#bxslider6').bxSlider();
+  jQuery('#bxslider7').bxSlider();
+  jQuery('#bxslider8').bxSlider();
+  jQuery('#bxslider9').bxSlider();
+  jQuery('#bxslider10').bxSlider();
+  jQuery('#bxslider11').bxSlider();
+  jQuery('#bxslider12').bxSlider();
+});
+</script>
+</body>
+</html>

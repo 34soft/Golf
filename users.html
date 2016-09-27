@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Golf Reservation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" media="screen">
+<link href="bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+<link href="css/bootflat.css" rel="stylesheet" media="screen">
+<link href="css/bootflat-extensions.css" rel="stylesheet" media="screen">
+<link href="css/bootflat-square.css" rel="stylesheet" media="screen">
+<link href="css/style.css" rel="stylesheet" media="screen">
+<link href="css/chosen.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="js/jquery-ui.css">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+      <![endif]-->
+
+</head>
+<body>
+
+<!--- header nav ---->
+<header role="banner" class="navbar navbar-inverse" id="header">
+  <div class="navbar-header"> <a class="navbar-brand" href="../index.html"> GOLF <span> CLUB </span> </a> 
+    
+    <!--<button data-target=".bf-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle collapsed"> <span class="sr-only"> navigation </span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> -->
+    
+    <div class="nav-button" id="hide2"> <img src="images/gears.png"> </div>
+  </div>
+  <div id="firstimpression2" class="patientinfodivs nav-button-inner">
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <form class="bf-example bf-example-control-sizing">
+          <div class="form-search search-only">
+            <input type="text" class="form-control search-query">
+          </div>
+        </form>
+      </li>
+      <li class="active"><a href="#"> Welcome Admin </a></li>
+      <li><a href="#"> Account </a></li>
+      <li class="logout"><a href="#"> Logout</a></li>
+      <li class="gears"><a href="#"> <img src="images/gears.png"> </a> </li>
+    </ul>
+  </div>
+</header>
+
+<!-- header nav closed -->
+
+<div class="content">
+  <div class="row"> 
+    
+    <!--- aside menu start ---->
+    
+    <div class="col-md-2" id="aside">
+      <div class="home-navigation"> Navigation </div>
+      <div id="firstimpression1" class="patientinfodivs1">
+        <ul class="nav nav-list nav-list-panel" >
+          <li class="dashbord"><a href="#"> Dashboard </a></li>
+          <li class="active itineraries" id="create-menu"> <a href="#"> Itineraries </a> </li>
+		   <li class="create-sub-menu" id="create-sub-menu">
+		  <ul>
+          <li class="overview"> Overview </li>
+          <li class="nav-header"> Create </li>
+		  </ul>
+		   </li>
+		  
+          <li class="golf"><a href="#"> Golf </a> </li>
+          <li class="meals"><a href="#"> Meals </a></li>
+          <li class="events"><a href="#"> Events </a></li>
+          <li class="transport"><a href="#"> Transport </a></li>
+          <li class="accomodations"><a href="#"> Accomodations </a></li>
+          <li class="reports"><a href="#"> Reports </a></li>
+          <li class="members"><a href="#"> Members </a></li>
+		 
+		  
+        </ul>
+      </div>
+    </div>
+    <!--- aside menu start closed ----> 
+    
+    <!--- right content section --->
+    <div class="col-md-10" id="itinerary-content"> 
+      
+      <!--- new Itinerary start --->
+      <div class="patientinfodivs1" id="firstimpression3">
+        <div class="new-itinerary"> 
+          
+          <!-- // overview top nav // -->
+          <ul class="nav navbar-nav overview-topnav">
+            <li class="active"> <a href="#"> Today </a> </li>
+            <li> <a href="#"> Week </a> </li>
+            <li> <a href="#"> Month </a> </li>
+          </ul>
+          <div class="itinerary-menu">
+            <div class="col-md-12">
+              <ul class="nav navbar-nav">
+                <li class="quick-action"><a href="#"> Quick Actions</a>
+                  <ul class="sub-menu">
+                    <li> <a href="#"> Create </a> </li>
+                    <li> <a href="#"> Members </a> </li>
+                    <li> <a href="#"> Reports </a> </li>
+                  </ul>
+                </li>
+                <li class="quick-report"><a href="#">Quick Reports</a>
+                  <ul class="sub-menu">
+                    <li> <a href="#"> Members </a> </li>
+                    <li> <a href="#"> Reports</a> </li>
+                    <li> <a href="#"> Create </a> </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="advance-Search" id="hide"> <a class="btn" href="#"> Advanced Search </a> </div>
+              <div id="firstimpression" class="patientinfodivs advance-none">
+                <form class="bf-example" id="searching-input">
+                  <div class="row">
+                    <div class="col-lg-1">
+                      <input type="text" placeholder="Itinerary #" class="form-control">
+                    </div>
+                    <div class="col-lg-3">
+                      <input type="text" placeholder="Member" class="form-control">
+                    </div>
+                    <div class="col-lg-3">
+                      <input type="text" placeholder="Tags" class="form-control">
+                    </div>
+                    <div class="col-lg-2"> <span class="Start"> Start </span>
+                      <input type="text" placeholder="" id="datepicker3" class="form-control">
+                    </div>
+                    <div class="col-lg-3"> <span class="end"> end </span>
+                      <input type="text" placeholder="" id="datepicker4" class="form-control">
+                      <input type="button" class="advance-search1" value="search"/>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- new Itinerary start end ---> 
+      
+  <!-- ACCORDION START -->
+
+	<div class="simple-accordion">
+		<div class="panel-group" id="accordion">
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsegeneral" class="collapsed">
+				  General
+				</a>
+			  </h4>
+			</div>
+			<div id="collapsegeneral" class="panel-collapse" style="height:0;">
+			  <div class="panel-body">
+				<div class="row">
+					<div class="col-md-7">
+					  <form>
+						<ul>
+						<li><label>Site Name</label><input type="text" placeholder="IMA Test" ></li>
+						<li><label>Site Primary URL</label><input type="text" placeholder="ima-rm-new.mtszone.com" ></li>
+						<li><label>Site Testing URL</label><input type="text" placeholder="ima-rm-new.mtszone.com" ></li>
+						<li><label>Site Logo</label><input type="text" placeholder="ima-rm-new.mtszone.com" ></li>
+						</ul>
+					  </form>
+					</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseusers" class="collapsed">
+				  Users
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseusers" class="panel-collapse" style="height:0;">
+			  <div class="panel-body">
+				
+				<!-- POPUP MODELS STARTS -->
+
+				<!-- Modal -->
+				<div class="userfields modal fade bs-example-modal-lg" id="user-fields" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-lg">
+					<div class="modal-content">
+					  <div class="titles-user">
+						<a class="close" data-dismiss="modal" aria-hidden="true"></a>
+						<h4 >Edit User</h4>
+					  </div>
+					  <div class="modal-body">
+					  <!-- FORM FIELDS -->
+					  <form>
+					  <div class="fields-three-cols">
+					  
+					  <div class="row row-fields">
+						<div class="col-md-4">
+						<label>Username</label>
+						<input type="text" placeholder="rmartin">
+						</div>
+						<div class="col-md-4">
+						<label>Password</label>
+						<input type="text" placeholder="">
+						</div>
+						<div class="col-md-4">
+						<label>Password</label>
+						<input type="text" placeholder="">
+						</div>
+					  </div>
+					  <div class="row row-fields">
+						<div class="col-md-4">
+						<label>First Name</label>
+						<input type="text" placeholder="Ruyan">
+						</div>
+						<div class="col-md-4">
+						<label>Middle Name</label>
+						<input type="text" placeholder="">
+						</div>
+						<div class="col-md-4">
+						<label>Last Name</label>
+						<input type="text" placeholder="">
+						</div>
+					  </div>
+					   <div class="row row-fields">
+						<div class="col-md-4">
+						<label>Mailing Name</label>
+						<input type="text" placeholder="Ryan Martin">
+						</div>
+						<div class="col-md-4">
+						<label>Permission Level</label>
+						<select>
+						<option>Full Access Admin</option>
+						<option>Editor</option>
+						<option>Author</option>
+						</select>
+						</div>
+					  </div>
+					  
+					  </div>
+					  <!-- Three Cols ENDS -->
+					  
+					  <div class="fields-two-cols">
+						<div class="row row-fields">
+							<div class="col-md-6">
+							<label>Primary Address (line 1)</label>
+							<input type="text" placeholder="7100" />
+							</div>
+							<div class="col-md-6">
+							<label>Secondary Address (line 1)</label>
+							<input type="text" placeholder="348 S HAMBDEN ST" />
+							</div>
+						</div>
+						<div class="row row-fields">
+							<div class="col-md-6">
+							<label>Primary Address (line 2)</label>
+							<input type="text" placeholder="ste. 300" />
+							</div>
+							<div class="col-md-6">
+							<label>Secondary Address (line 2)</label>
+							<input type="text" placeholder="" />
+							</div>
+						</div>
+						<div class="row row-fields">
+							<div class="col-md-6">
+							<label>Primary City</label>
+							<input type="text" placeholder="Independance" />
+							</div>
+							<div class="col-md-6">
+							<label>Secondary City</label>
+							<input type="text" placeholder="Chardon" />
+							</div>
+						</div>
+						<div class="row row-fields">
+							<div class="col-md-6">
+								<div class="row row-fields small-fields">
+								<div class="col-md-6">
+								<label>Primary State</label>
+								<input type="text" placeholder="OHIO" />
+								</div>
+								<div class="col-md-6">
+								<label>Primary Postal Code</label>
+								<input type="text" placeholder="44131" />
+								</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="row row-fields small-fields">
+								<div class="col-md-6">
+								<label>Secondary State</label>
+								<input type="text" placeholder="OHIO" />
+								</div>
+								<div class="col-md-6">
+								<label>Secondary Postal Code</label>
+								<input type="text" placeholder="12345" />
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="row row-fields">
+							<div class="col-md-6">
+							<label>Primary Phone</label>
+							<input type="text" placeholder="12345678" />
+							</div>
+							<div class="col-md-6">
+							<label>Secondary Phone</label>
+							<input type="text" placeholder="8787676563" />
+							</div>
+						</div>
+						<div class="row row-fields">
+							<div class="col-md-6">
+							<label>Primary Email</label>
+							<input type="text" placeholder="rmartin@marathontechservices.com" />
+							</div>
+							<div class="col-md-6">
+							<label>Secondary Email</label>
+							<input type="text" placeholder="rmartin@marathontechservices.com" />
+							</div>
+						</div>
+						
+					  </div>
+					  
+					  <div class="user-fields-submit">
+					  <input type="submit" value="UPDATe" />
+					  </div>
+					  </form>
+					 <!-- FORM FIELDS ENDS-->
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<!-- POPUP MODELS ENDS -->
+			  
+			  
+				<ul>
+				<li><a href="#" data-toggle="modal" data-target="#user-fields">Ryan Martin</a><span class="user-close" ></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				<li><a href="#">Ryan Martin</a><span class="user-close"></span></li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsepermissions" class="collapsed">
+				  Permissions
+				</a>
+			  </h4>
+			</div>
+			<div id="collapsepermissions" class="panel-collapse collapse" style="height:0;">
+			  <div class="panel-body">
+				<div class="permissions-block">
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+				<tr>
+				<th width="18%">Name</th>
+				<th>Users</th>
+				<th>Members</th>
+				<th>Guests</th>
+				<th>Proshop</th>
+				<th>Teetimes</th>
+				<th>Lodging</th>
+				<th>Transportation</th>
+				<th>Admin</th>
+				<th>Actions</th>
+				</tr>
+				<tr>
+				<td>Full Access Admin</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td></td>
+				</tr>
+				<tr>
+				<td>Normal Full User</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td>Full</td>
+				<td><ul class="per-actions">
+				<li class="edit-permis"><a href="#"></a></li>
+				<li class="del-permis"><a href="#"></a></li>
+				</ul></td>
+				</tr>
+				<tr class="create-permis">
+				<td><input type="text" placeholder="Name" /></td>
+				<td><select>
+				<option>Full</option>
+				<option>None</option>
+				</select></td>
+				<td><select>
+				<option>Full</option>
+				<option>None</option>
+				</select></td>
+				<td><select>
+				<option>Full</option>
+				<option>None</option>
+				</select></td>
+				<td><select>
+				<option>Full</option>
+				<option>None</option>
+				</select></td>
+				<td><select>
+				<option>Full</option>
+				<option>None</option>
+				</select></td>
+				<td><select>
+				<option>Full</option>
+				<option>None</option>
+				</select></td>
+				<td><select>
+				<option>Full</option>
+				<option>None</option>
+				</select></td>
+				<td><select>
+				<option>Full</option>
+				<option>None</option>
+				</select></td>
+				<td><input type="submit" value="create" /></td>
+				</tr>
+				</table>
+				</div>
+				
+			  </div>
+			</div>
+		  </div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapselogs" class="collapsed">
+				  Logs
+				</a>
+			  </h4>
+			</div>
+			<div id="collapselogs" class="panel-collapse collapse" style="height:0;">
+			  <div class="panel-body">
+				<div class="logs-block">
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" >
+				<tr>
+				<th width="18%">Event Name</th>
+				<th>Log Entry</th>
+				<th>Timestamp</th>
+				<th>Severity</th>
+				<th>Module Name</th>
+				<th>Event Parent ID</th>
+				</tr>
+				<tr>
+				<td>List Perms</td>
+				<td>Listed all site perms.</td>
+				<td>2014-04-04 10:12:47</td>
+				<td>informational</td>
+				<td>Admin</td>
+				<td>3</td>
+				</tr>
+				<tr>
+				<td>List User	</td>
+				<td>Listed user detail with user id of: “7”.	</td>
+				<td>2014-04-04 10:12:47</td>
+				<td>informational</td>
+				<td>Admin</td>
+				<td>3</td>
+				</tr>
+				<tr>
+				<td>List User	</td>
+				<td>Listed user detail with user id of: “7”.	</td>
+				<td>2014-04-04 10:12:47</td>
+				<td>informational</td>
+				<td>Admin</td>
+				<td>3</td>
+				</tr>
+				<tr>
+				<td>List User	</td>
+				<td>Listed user detail with user id of: “7”.	</td>
+				<td>2014-04-04 10:12:47</td>
+				<td>informational</td>
+				<td>Admin</td>
+				<td>3</td>
+				</tr>
+				<tr>
+				<td>List User	</td>
+				<td>Listed user detail with user id of: “7”.	</td>
+				<td>2014-04-04 10:12:47</td>
+				<td>informational</td>
+				<td>Admin</td>
+				<td>3</td>
+				</tr>
+				</table>
+				</div>
+				
+			  </div>
+			</div>
+		  </div>
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseaccommodations" class="collapsed">
+				  Accommodations
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseaccommodations" class="panel-collapse collapse" style="height:0;">
+			  <div class="panel-body">
+				<!-- ACCOMODATION ACCORDION STARTS -->
+				<div class="create-accomo">
+				<h4>Create New</h4>
+					<div class="accomo-rowcon">
+						<div class="create-inner row">
+							<div class="col-md-4 input-create"><input type="text" placeholder="Accommodation Name" /></div>
+							<div class="col-md-4 input-quen">
+							<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+							<input type="submit" value="Save" />
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			<div class="manage-accomo">
+				<h4>Manage Existing</h4>
+				<div class="panel-group" id="accomodation">
+				  <div class="panel panel-default " >
+				 
+				  <div class="accomo-rowcon">
+				  <!-- create-inner STARTS -->
+				  <div class="create-inner">
+					<div class="row">
+							<div class="col-md-4 input-create"><input type="text" placeholder="Accommodation Name" /></div>
+							<div class="col-md-4 input-quen">
+							<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+							<input type="submit" value="Update" />
+							</div>
+							<div class="col-md-2 accomo-total">
+							<strong>Total Beds:</strong> 12
+							</div>
+							<div class="col-md-2 accomo-collaspe">
+							<a data-toggle="collapse" data-parent="#accomodation" href="#collapseOne" class="collapsed">
+							 Collapse
+							</a>
+							</div>
+						</div>
+					</div>
+					<!-- create-inner ENDS -->
+					
+					<!-- Collasping row -->
+					<div id="collapseOne" class="panel-collapse collapse" style="height:0;">
+					  <div class="panel-body">
+						<div class="row rooms-updation">
+							<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+							<span class="title-span">Rooms</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+						
+							</div>
+							<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+							<Span class="title-span">Rooms</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+						
+							</div>
+							<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+							<Span class="title-span">Rooms</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+						
+							</div>
+							<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+							<Span class="title-span">Rooms</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+						
+							</div>
+						</div>
+						<div class="row rooms-updation">
+							<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+							<span class="title-span">Rooms</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+						
+							</div>
+							<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+							<Span class="title-span">Rooms</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+						
+							</div>
+							<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+							<Span class="title-span">Rooms</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+						
+							</div>
+							<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+							<Span class="title-span">Rooms</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+						
+							</div>
+						</div>
+						
+					  </div>
+					</div>
+					<!-- Collasping row ENDS-->
+					</div>
+					
+				  </div>
+				  <!-- First Panel ENDS -->
+				  
+				  <div class="panel panel-default ">
+				 
+				  <div class="accomo-rowcon">
+				  <!-- create-inner STARTS -->
+				  <div class="create-inner">
+					<div class="row">
+							<div class="col-md-4 input-create"><input type="text" placeholder="Accommodation Name" /></div>
+							<div class="col-md-4 input-quen">
+							<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+							<input type="submit" value="Update" />
+							</div>
+							<div class="col-md-2 accomo-total">
+							<strong>Total Beds:</strong> 12
+							</div>
+							<div class="col-md-2 accomo-collaspe">
+							<a data-toggle="collapse" data-parent="#accomodation" href="#collapsetwo" class="collapsed">
+							 Collapse
+							</a>
+							</div>
+						</div>
+					</div>
+					<!-- create-inner ENDS -->
+					
+					<!-- Collasping row -->
+					<div id="collapsetwo" class="panel-collapse collapse" style="height:0;">
+					  <div class="panel-body">
+						<div class="row rooms-updation">
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						
+						</div>
+					  </div>
+					</div>
+					<!-- Collasping row ENDS-->
+					</div>
+					
+				  </div>
+				  <!-- Second Panel ENDS -->
+				  <div class="panel panel-default " >
+				 
+				  <div class="accomo-rowcon">
+				  <!-- create-inner STARTS -->
+				  <div class="create-inner">
+					<div class="row">
+							<div class="col-md-4 input-create"><input type="text" placeholder="Accommodation Name" /></div>
+							<div class="col-md-4 input-quen">
+							<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+							<input type="submit" value="Update" />
+							</div>
+							<div class="col-md-2 accomo-total">
+							<strong>Total Beds:</strong> 12
+							</div>
+							<div class="col-md-2 accomo-collaspe">
+							<a data-toggle="collapse" data-parent="#accomodation" href="#collapsethird" class="collapsed">
+							 Collapse
+							</a>
+							</div>
+						</div>
+					</div>
+					<!-- create-inner ENDS -->
+					
+					<!-- Collasping row -->
+					<div id="collapsethird" class="panel-collapse collapse" style="height:0;">
+					  <div class="panel-body">
+						<div class="row rooms-updation">
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						
+						</div>
+					  </div>
+					</div>
+					<!-- Collasping row ENDS-->
+					</div>
+					
+				  </div>
+				  <!-- Third Panel ENDS -->
+				  
+				  <div class="panel panel-default ">
+				 
+				  <div class="accomo-rowcon">
+				  <!-- create-inner STARTS -->
+				  <div class="create-inner">
+					<div class="row">
+							<div class="col-md-4 input-create"><input type="text" placeholder="Accommodation Name" /></div>
+							<div class="col-md-4 input-quen">
+							<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+							<input type="submit" value="Update" />
+							</div>
+							<div class="col-md-2 accomo-total">
+							<strong>Total Beds:</strong> 12
+							</div>
+							<div class="col-md-2 accomo-collaspe">
+							<a data-toggle="collapse" data-parent="#accomodation" href="#collapsefour" class="collapsed">
+							 Collapse
+							</a>
+							</div>
+						</div>
+					</div>
+					<!-- create-inner ENDS -->
+					
+					<!-- Collasping row -->
+					<div id="collapsefour" class="panel-collapse collapse" style="height:0;">
+					  <div class="panel-body">
+						<div class="row rooms-updation">
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						<div class="col-md-3"><strong>Room #1 No. of Beds</strong>
+						<Span class="title-span">Rooms</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+					
+						</div>
+						
+						</div>
+					  </div>
+					</div>
+					<!-- Collasping row ENDS-->
+					</div>
+					
+				  </div>
+				  <!-- Fourth Panel ENDS -->
+				  
+
+				</div>
+			</div>
+				
+				
+				
+				
+				<!-- ACCOMODATION ACCORDION ENDS-->
+				
+			  </div>
+			</div>
+		  </div>
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapsemeals" class="collapsed">
+				  Meals
+				</a>
+			  </h4>
+			</div>
+			<div id="collapsemeals" class="panel-collapse collapse" style="height:0;">
+			  <div class="panel-body">
+				<!-- ACCOMODATION ACCORDION STARTS -->
+				<div class="create-accomo">
+				<h4>Create New</h4>
+					<div class="accomo-rowcon">
+						<div class="create-inner row">
+							<div class="col-md-4 input-create"><input type="text" placeholder="Location Name" /></div>
+							<div class="col-md-4 input-quen">
+							<Span class="title-span">Tables</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+							<input type="submit" value="Save" />
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			<div class="manage-accomo">
+				<h4>Manage Existing</h4>
+				<div class="panel-group" id="accomodation">
+				  <div class="panel panel-default " >
+				 
+				  <div class="accomo-rowcon">
+				  <!-- create-inner STARTS -->
+				  <div class="create-inner">
+					<div class="row">
+							<div class="col-md-4 input-create"><input type="text" placeholder="Restaurant #1" /></div>
+							<div class="col-md-4 input-quen">
+							<Span class="title-span">Chairs</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+							<input type="submit" value="Update" />
+							</div>
+							<div class="col-md-2 accomo-total">
+							<strong>Total Chairs:</strong> 12
+							</div>
+							<div class="col-md-2 accomo-collaspe">
+							<a data-toggle="collapse" data-parent="#accomodation" href="#mealcollapseOne" class="collapsed">
+							 Collapse
+							</a>
+							</div>
+						</div>
+					</div>
+					<!-- create-inner ENDS -->
+					
+					<!-- Collasping row -->
+					<div id="mealcollapseOne" class="panel-collapse collapse" style="height:0;">
+					  <div class="panel-body">
+						<div class="row rooms-updation">
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+						</div>
+						<div class="row rooms-updation">
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+						</div>
+						
+					  </div>
+					</div>
+					<!-- Collasping row ENDS-->
+					</div>
+					
+				  </div>
+				  <!-- First Panel ENDS -->
+				  
+				  <div class="panel panel-default ">
+				 
+				  <div class="accomo-rowcon">
+				  <!-- create-inner STARTS -->
+				  <div class="create-inner">
+					<div class="row">
+							<div class="col-md-4 input-create"><input type="text" placeholder="Lounge" /></div>
+							<div class="col-md-4 input-quen">
+							<Span class="title-span">Tables</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+							<input type="submit" value="Update" />
+							</div>
+							<div class="col-md-2 accomo-total">
+							<strong>Total Chairs:</strong> 12
+							</div>
+							<div class="col-md-2 accomo-collaspe">
+							<a data-toggle="collapse" data-parent="#accomodation" href="#mealcollapsetwo" class="collapsed">
+							 Collapse
+							</a>
+							</div>
+						</div>
+					</div>
+					<!-- create-inner ENDS -->
+					
+					<!-- Collasping row -->
+					<div id="mealcollapsetwo" class="panel-collapse collapse" style="height:0;">
+					  <div class="panel-body">
+						<div class="row rooms-updation">
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+						</div>
+					  </div>
+					</div>
+					<!-- Collasping row ENDS-->
+					</div>
+					
+				  </div>
+				  <!-- Second Panel ENDS -->
+				  <div class="panel panel-default " >
+				 
+				  <div class="accomo-rowcon">
+				  <!-- create-inner STARTS -->
+				  <div class="create-inner">
+					<div class="row">
+							<div class="col-md-4 input-create"><input type="text" placeholder="Lounge" /></div>
+							<div class="col-md-4 input-quen">
+							<Span class="title-span">Tables</span>
+							<a href="#" class="icon-minus" ></a>
+							<input class="quentity-input" type="text"  />
+							<a href="#"  class="icon-plus"  ></a>
+							<input type="submit" value="Update" />
+							</div>
+							<div class="col-md-2 accomo-total">
+							<strong>Total Chairs:</strong> 12
+							</div>
+							<div class="col-md-2 accomo-collaspe">
+							<a data-toggle="collapse" data-parent="#accomodation" href="#mealcollapsethird" class="collapsed">
+							 Collapse
+							</a>
+							</div>
+						</div>
+					</div>
+					<!-- create-inner ENDS -->
+					
+					<!-- Collasping row -->
+					<div id="mealcollapsethird" class="panel-collapse collapse" style="height:0;">
+					  <div class="panel-body">
+						<div class="row rooms-updation">
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+							<div class="col-md-3"><strong>Table #1 No. of Chairs</strong>
+							<span class="title-span">Chairs</span>
+								<a href="#" class="icon-minus" ></a>
+								<input class="quentity-input" type="text"  />
+								<a href="#"  class="icon-plus"  ></a>
+							</div>
+						</div>
+					  </div>
+					</div>
+					<!-- Collasping row ENDS-->
+					</div>
+					
+				  </div>
+				  <!-- Third Panel ENDS -->
+			  
+
+				</div>
+			</div>
+				
+				
+				
+				
+				<!-- ACCOMODATION ACCORDION ENDS-->
+				
+			  </div>
+			  
+			</div>
+		  </div>
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseevents" class="collapsed">
+				  Events
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseevents" class="panel-collapse collapse" style="height:0;">
+			  <div class="panel-body">
+				<div class="create-events">
+				<h4>Create New</h4>
+					<div class="row">
+						<div class="col-md-6">
+						  <div class="create-innercol">
+							<input type="text" placeholder="Event Location Name #1" class="event-loca">
+							<h3>Location Assets</h3>
+							<div class="event-loc">
+							<input type="text" placeholder="Name" class="event-name" />
+							<input type="text" placeholder="Qty" class="event-qty" />
+							<input type="submit" placeholder="Qty" class="event-add" />
+							</div>
+							<div class="btn-center">
+							<input type="submit" value="save" class="event-save"/>
+							</div>
+						 </div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="manage-events">
+				<h4>Manage Existing</h4>
+					<div class="row">
+						<div class="col-md-6">
+						 <div class="manage-innercol">
+							<input type="text" placeholder="Event Location Name #1" class="event-loca">
+							<h3>Location Assets</h3>
+							<div class="event-loc">
+							<input type="text" placeholder="Asset 1" class="event-name" />
+							<input type="text" placeholder="120" class="event-qty" />
+							<input type="submit" class="event-del" />
+							</div>
+							<div class="event-loc">
+							<input type="text" placeholder="Asset 1" class="event-name" />
+							<input type="text" placeholder="120" class="event-qty" />
+							<input type="submit" class="event-del" />
+							</div>
+							<div class="event-loc">
+							<input type="text" placeholder="Asset 1" class="event-name" />
+							<input type="text" placeholder="120" class="event-qty" />
+							<input type="submit" class="event-del" />
+							</div>
+							<div class="btn-center">
+							<input type="submit" value="UpDATE" class="event-save"/>
+							</div>
+						  </div>
+						</div>
+						<div class="col-md-6">
+						 <div class="manage-innercol">
+							<input type="text" placeholder="Event Location Name #1" class="event-loca">
+							<h3>Location Assets</h3>
+							<div class="event-loc">
+							<input type="text" placeholder="Asset 1" class="event-name" />
+							<input type="text" placeholder="120" class="event-qty" />
+							<input type="submit" class="event-del" />
+							</div>
+							<div class="event-loc">
+							<input type="text" placeholder="Asset 1" class="event-name" />
+							<input type="text" placeholder="120" class="event-qty" />
+							<input type="submit" class="event-del" />
+							</div>
+							<div class="event-loc">
+							<input type="text" placeholder="Asset 1" class="event-name" />
+							<input type="text" placeholder="120" class="event-qty" />
+							<input type="submit" class="event-del" />
+							</div>
+							<div class="btn-center">
+							<input type="submit" value="UpDATE" class="event-save"/>
+							</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				
+			  </div>
+			</div>
+		  </div>
+	    
+		</div>
+			
+	</div>
+  <!-- ACCORDION ENDS -->
+      
+    </div>
+  </div>
+</div>
+<!--- main content end ---> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.icheck.js"></script> 
+<script src="js/jquery-1.10.1.min.js"></script> 
+<script src="js/head.js"></script> 
+<script src="js/bootstrap.js"> </script> 
+<script src="js/jquery-ui.js"></script>
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+$('.create-sub-menu').css({"display":"none"});
+  var counter =  1;
+  $("#hide").addClass('hide1');
+  $("#hide").click(function(e){
+	e.preventDefault();
+    $("#firstimpression").toggle();
+	if(counter%2 == 0)
+	{
+	$(this).removeClass('show');
+	$(this).addClass('hide1');
+	}
+	else
+	{
+	$(this).addClass('show');
+	$(this).removeClass('hide1');
+	}
+	counter++;
+    //$(".slidingDiv, .create-sub-menu").css("display","block");
+  });
+  $('#create-menu').click(function(e){
+	e.preventDefault();
+	$('.create-sub-menu').toggle();
+  });
+});
+</script>
+
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $('.home-navigation').click(function(e){
+	e.preventDefault();
+	$('.patientinfodivs1').toggle();
+  });
+});
+</script> 
+
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $("#hide1").click(function(){
+    $("#firstimpression1").toggle();
+    $(".slidingDiv").css("display","block");
+  });
+});
+</script> 
+<script>
+var $= jQuery.noConflict()
+$(document).ready(function(){
+  $("#hide2").click(function(){
+    $("#firstimpression2").toggle();
+    $(".slidingDiv").css("display","block");
+  });
+});
+</script> 
+<script>
+$(function() {
+$( "#datepicker, #datepicker1, #datepicker2, #datepicker3, #datepicker4" ).datepicker({
+showOn: "button",
+buttonImage: "images/calendar.gif",
+buttonImageOnly: true
+});
+});
+</script> 
+<script>
+$(document).ready(function(){
+  $("#hide1").click(function(){
+    $("#firstimpression3").show();
+  });
+});
+</script> 
+</body>
+</html>

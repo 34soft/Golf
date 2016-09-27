@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Golf Reservation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" media="screen">
+<link href="bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+<link href="css/bootflat.css" rel="stylesheet" media="screen">
+<link href="css/bootflat-extensions.css" rel="stylesheet" media="screen">
+<link href="css/bootflat-square.css" rel="stylesheet" media="screen">
+<link href="css/style.css" rel="stylesheet" media="screen">
+<link href="css/chosen.css" rel="stylesheet" media="screen">
+<link rel="stylesheet" href="js/jquery-ui.css">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+      <![endif]-->
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery.js"></script> 
+<script src="js/jquery.jqtransform.js"></script>
+<link rel="stylesheet" href="js/jqtransform.css">
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.icheck.js"></script> 
+
+<script src="js/bootstrap-carousel.js"></script> 
+<script src="js/bootstrap-transition.js"></script> 
+<script src="js/head.js"></script> 
+<script src="js/bootstrap.js"> </script> 
+<script src="js/jquery.mCustomScrollbar.js"> </script> 
+<script src="js/jquery-ui.js"></script>
+<script src="js/bootstrap-tab.js"></script>	
+
+
+<script>jQuery.noConflict();</script>
+
+<script>
+jQuery(function() {
+jQuery( "#datepicker, #datepicker1, #datepicker2, #datepicker3, #datepicker4, #datepicker5, #datepicker6" ).datepicker({
+showOn: "button",
+buttonImage: "images/calendar.gif",
+buttonImageOnly: true
+});
+});
+</script> 
+
+ <!--- scroller --->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script>
+(function($){
+	$(window).load(function(){
+		$(".content").mCustomScrollbar({
+			scrollButtons:{
+				enable:true
+			}
+		});
+	});
+})(jQuery);
+</script>
+
+</head>
+<body>
+
+<!--- header nav ---->
+<header role="banner" class="navbar navbar-inverse" id="header">
+  <div class="navbar-header"> <a class="navbar-brand" href="../index.html"> GOLF <span> CLUB </span> </a>
+    <div class="nav-button" id="hide2"> <img src="images/gears.png"> </div>
+  </div>
+  <div id="firstimpression2" class="patientinfodivs nav-button-inner">
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <form class="bf-example bf-example-control-sizing">
+          <div class="form-search search-only">
+            <input type="text" class="form-control search-query">
+          </div>
+        </form>
+      </li>
+      <li class="active"><a href="#"> Welcome Admin </a></li>
+      <li><a href="#"> Account </a></li>
+      <li class="logout"><a href="#"> Logout</a></li>
+      <li class="gears"><a href="#"> <img src="images/gears.png"> </a> </li>
+    </ul>
+  </div>
+</header>
+
+<!-- header nav closed -->
+
+<div class="content">
+  <div class="row"> 
+    
+    <!--- aside menu start ---->
+    <div class="col-md-2" id="aside">
+      <div class="advance-Search" id="hide1"> Navigation </div>
+      <div id="firstimpression1" class="patientinfodivs">
+        <ul class="nav nav-list nav-list-panel" >
+          <li class="dashbord"><a href="#"> Dashboard </a></li>
+          <li class="active itineraries" id="create-menu"> <a href="#"> Itineraries </a> </li>
+          <li class="create-sub-menu" id="create-sub-menu">
+            <ul>
+              <li class="overview"> Overview </li>
+              <li class="nav-header"> Create </li>
+            </ul>
+          </li>
+          <li class="golf"><a href="#"> Golf </a> </li>
+          <li class="meals"><a href="#"> Meals </a></li>
+          <li class="events"><a href="#"> Events </a></li>
+          <li class="transport"><a href="#"> Transport </a></li>
+          <li class="accomodations"><a href="#"> Accomodations </a></li>
+          <li class="reports"><a href="#"> Reports </a></li>
+          <li class="members"><a href="#"> Members </a></li>
+        </ul>
+      </div>
+    </div>
+    <!--- aside menu start closed ----> 
+    
+    <!--- right content section --->
+    <div class="col-md-10" id="itinerary-content"> 
+      
+      <!--- new Itinerary start --->
+      <div class="patientinfodivs" id="firstimpression3">
+        <div class="new-itinerary">
+          <h1> Create a new Itinerary </h1>
+          <div class="itinerary-menu">
+            <div class="col-md-12">
+              <ul class="nav navbar-nav">
+                <li class="quick-action"><a href="#"> Quick Actions</a>
+                  <ul class="sub-menu">
+                    <li> <a href="#"> Create </a> </li>
+                    <li> <a href="#"> Members </a> </li>
+                    <li> <a href="#"> Reports </a> </li>
+                  </ul>
+                </li>
+                <li class="quick-report"><a href="#">Quick Reports</a>
+                  <ul class="sub-menu">
+                    <li> <a href="#"> Members </a> </li>
+                    <li> <a href="#"> Reports</a> </li>
+                    <li> <a href="#"> Create </a> </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="advance-Search" id="hide"> <a class="btn" href="#"> Advanced Search </a> </div>
+              <div id="firstimpression" class="patientinfodivs advance-none">
+                <form class="bf-example" id="searching-input">
+                  <div class="row">
+                    <div class="col-lg-1">
+                      <input type="text" placeholder="Itinerary #" class="form-control">
+                    </div>
+                    <div class="col-lg-3">
+                      <input type="text" placeholder="Member" class="form-control">
+                    </div>
+                    <div class="col-lg-3">
+                      <input type="text" placeholder="Tags" class="form-control">
+                    </div>
+                    <div class="col-lg-2"> <span class="Start"> Start </span>
+                      <input type="text" placeholder="" id="datepicker3" class="form-control">
+                    </div>
+                    <div class="col-lg-3"> <span class="end"> end </span>
+                      <input type="text" placeholder="" id="datepicker4" class="form-control">
+                      <input type="button" class="advance-search1" value="search"/>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--- new Itinerary start end ---> 
+      
+      <!--- Itinerary SECTION --->
+      <div class="itinerary-section"> 
+        
+        <!--- People content sections --->
+        <div class="inner-content">
+          <h3> Itinerary #35435212 </h3>
+          <h1> People </h1>
+          <div class="row"> 
+            
+            <!-- People content block1 --->
+            <div class="col-lg-4">
+              <div class="add-people">
+                <h4> Add People to Itinerary </h4>
+                <form method="post" action="">
+                  <input type="text" required="" placeholder="Find Member or registered guest" class="form-control" name="text" value="">
+                  <input type="button" value="search" class="add-search">
+                  <a href="#"> </a> <span class="or"> Or </span> <a href="#" class="btn-info"> Add a Guest </a>
+                </form>
+              </div>
+            </div>
+            
+            <!-- People content block1 end ---> 
+            
+            <!-- People content block2 --->
+            <div class="col-lg-4 membership added-peiple-Itinerary">
+              <h4> People Added to Itinerary <a class="added-no" href="#"> 7 </a> </h4>
+              <p> <span class="members"> Members </span> <span class="actions"> Actions </span> </p>
+              <div class="content">
+                <ul class="nav nav-list nav-list-panel">
+                  <li class="yellow-star"> <a href="#"> <img src="images/m-user.png"> Shannon Fullenwider </a> <i class="fa fa-star"></i> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span> </li>
+                  <li> <a href="#"> <img src="images/m-user.png"> Joey Varnadoe</a> <i class="fa fa-star"></i> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span> </li>
+                  <li> <a href="#"> <img src="images/m-user.png"> Shaun Moreton </a> <i class="fa fa-star"></i> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span></li>
+                  <li> <a href="#"> <img src="images/m-user.png"> Alfonso Haverstock </a> <i class="fa fa-star"></i> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span></li>
+                  <li> <a href="#"> <img src="images/m-user.png"> Alfonso Haverstock </a> <i class="fa fa-star"></i> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span></li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- People content block2 end ---> 
+            
+            <!-- People content block3 --->
+            <div class="col-lg-4 membership">
+              <h4 class="responsible"> <i class="fa fa-star"></i> Itinerary Responsible (required) </h4>
+              <p> <span class="members"> Guests </span> <span class="actions"> Actions </span> </p>
+              <div class="content">
+                <ul class="nav nav-list nav-list-panel">
+                  <li class="yellow-star"> <a href="#"> <img src="images/m-user.png"> Arturo Franzoni </a> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span> </li>
+                  <li> <a href="#"> <img src="images/m-user.png"> Cameron Arbeiter </a> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span> </li>
+                  <li> <a href="#"> <img src="images/m-user.png"> Damon Buresh </a> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span></li>
+                  <li> <a href="#"> <img src="images/m-user.png"> Cameron Arbeiter </a> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span> </li>
+                  <li> <a href="#"> <img src="images/m-user.png"> Damon Buresh </a> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span></li>
+                  <li> <a href="#"> <img src="images/m-user.png"> Cameron Arbeiter </a> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span> </li>
+                  <li> <a href="#"> <img src="images/m-user.png"> Damon Buresh </a> <span class="buket"> <i class="fa fa-pencil"></i> <i class="fa fa-trash-o"></i> </span></li>
+                </ul>
+              </div>
+              <div class="bf-example">
+                <button class="btn btn-primary" type="button"> save </button>
+              </div>
+            </div>
+            <!-- People content block3  end---> 
+            
+          </div>
+        </div>
+        <!--- People content sections end ---> 
+        
+        <!--- Itinerary Data sections --->
+        <div class="itinerary-data">
+          <div class="row">
+            <div class="col-lg-12"> <span class="itinerary-title"> Itinerary Data </span> 
+              
+              <!-- chosen dates navbar  -->
+              <ul class="nav navbar-nav navbar-right chosen-dates">
+                <li class="nav-header"> Availability for your chosen dates </li>
+                <li class="choose-low"><a href="#"> 32% </a></li>
+                <li class="choose-medium"><a href="#"> 56% </a></li>
+                <li class="choose-verylow"><a href="#"> 3% </a></li>
+                <li class="choose-veryhigh"><a href="#"> 83% </a></li>
+              </ul>
+              <!-- /chosen dates navbar  end --> 
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="row">
+                <div class="col-lg-4"> <span class="start"> Start </span>
+                  <input type="text" placeholder="" id="datepicker" class="form-control">
+                </div>
+                <div class="col-lg-4"> <span class="end"> End </span>
+                  <input type="text" placeholder="" id="datepicker1" class="form-control">
+                </div>
+              </div>
+              
+              <!--- reservation type --->
+              <div class="row reservation-sections">
+                <h5> Reservation Type </h5>
+                <ul class="nav navbar-nav">
+                  <li>
+                    <input type="checkbox" checked="checked">
+                    <span> Golf</span> </li>
+                  <li>
+                    <input type="checkbox" checked="checked">
+                    <span> Meals </span> </li>
+                  <li>
+                    <input type="checkbox" checked="checked">
+                    <span> Events </span> </li>
+                  <li>
+                    <input type="checkbox" checked="checked">
+                    <span> Transport </span> </li>
+                  <li>
+                    <input type="checkbox" checked="checked">
+                    <span> Accomodations </span> </li>
+                </ul>
+                <form class="bf-example bf-example-control-sizing tags-input">
+                  <div class="chosen-select-wrapper">
+                    <select data-placeholder="Tags (separate by comma)" class="chosen-select" multiple tabindex="4">
+                      <option value=""> </option>
+                      <option value="United States">United States</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Afghanistan">Afghanistan</option>
+                      <option value="Aland Islands">Aland Islands</option>
+                      <option value="Albania">Albania</option>
+                      <option value="Algeria">Algeria</option>
+                      <option value="American Samoa">American Samoa</option>
+                      <option value="Andorra">Andorra</option>
+                      <option value="Angola">Angola</option>
+                      <option value="Anguilla">Anguilla</option>
+                      <option value="Antarctica">Antarctica</option>
+                      <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                      <option value="Argentina">Argentina</option>
+                      <option value="Armenia">Armenia</option>
+                      <option value="Aruba">Aruba</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Austria">Austria</option>
+                      <option value="Azerbaijan">Azerbaijan</option>
+                      <option value="Bahamas">Bahamas</option>
+                      <option value="Bahrain">Bahrain</option>
+                      <option value="Bangladesh">Bangladesh</option>
+                      <option value="Barbados">Barbados</option>
+                      <option value="Belarus">Belarus</option>
+                      <option value="Belgium">Belgium</option>
+                      <option value="Belize">Belize</option>
+                      <option value="Benin">Benin</option>
+                      <option value="Bermuda">Bermuda</option>
+                      <option value="Bhutan">Bhutan</option>
+                      <option value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+                      <option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+                      <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                      <option value="Botswana">Botswana</option>
+                      <option value="Bouvet Island">Bouvet Island</option>
+                    </select>
+                  </div>
+                </form>
+                
+                <!-- <ul class="nav navbar-nav add-tag">
+                  <li class="title"> Tags Added: </li>
+                  <li> <span> Important </span> <i class="fa fa-times-circle"></i> </li>
+                  <li> <span> VIP Group </span> <i class="fa fa-times-circle"></i> </li>
+                  <li> <span> Fullenwinder </span> <i class="fa fa-times-circle"></i> </li>
+                </ul> --> 
+              </div>
+              <!--- reservation type end ---> 
+              
+            </div>
+            
+            <!--- Itinerary Data description sections --->
+            <div class="col-lg-5 description">
+              <textarea placeholder="Description" class="form-control form-control-square"></textarea>
+              <textarea placeholder="General Notes" class="form-control form-control-square"></textarea>
+            </div>
+          </div>
+        </div>
+        <!--- Itinerary Data sections end ---> 
+        
+        <!-- Groups and Options Sections -->
+        <div class="groups-options">
+          <h1> Groups and Options </h1>
+          <div class="row"> 
+            
+            <!-- gp-aside --->
+            <div class="col-lg-3 gp-aside">
+              <ul class="nav nav-list nav-list-panel" id="">
+                <li class="active"><a class="golf" data-toggle="tab" href="#golf"> Golf </a></li>
+                <li><a class="meals" data-toggle="tab" href="#meals"> Meals </a></li>
+                <li><a class="events" data-toggle="tab" href="#events"> Events </a></li>
+                <li><a class="transport" data-toggle="tab" href="#transport"> Transport </a></li>
+                <li><a class="accomodations" data-toggle="tab" href="#accomodations"> Accomodations </a></li>
+              </ul>
+            </div>
+            
+            <!--- gp-aside end --->
+            
+            <div class="col-lg-9 group-1">
+			
+			  
+						
+<div class="tab-content" id="myTabContent">
+<div id="golf" class="tab-pane fade in active">	
+  <div id="golf-inner" class="setiontab-inner">	
+
+<div class="gp1-header">
+                <div class="gp1-header"> 
+                <!-- date tab -->
+                <div class="date-tab">
+                  <ul class="bxslidercol" id="bxslider1">
+                    <li class="active"> <a href="#"> 02/03 </a> </li>
+                    <li> <a href="#"> 02/04 </a> </li>
+                    <li> <a href="#"> 02/05 </a> </li>
+                    <li> <a href="#"> 02/06 </a> </li>
+                  </ul>
+                </div>
+                <!-- date tab end -->        
+                <!-- reservation tab -->
+                <div class="Lodge-tab">
+                  <ul class="bxslidercol" id="bxslider2">
+                    <li class="active"> <a href="#"> Group 1 <span class="value"> 3 </span> <span class="vertical-arrow"> vertically-arrow </span> </a> </li>
+                    <li> <a href="#"> Group 2 <span class="value black"> 0 </span>
+					<span class="vertical-arrow"> vertically-arrow </span>  </a> </li>
+                    <li> <a href="#"> Group 3 <span class="value"> 2 </span> <span class="vertical-arrow"> vertically-arrow </span> </a> </li>
+                    <li> <a href="#"> Group 4 <span class="value"> 1 </span> <span class="vertical-arrow"> vertically-arrow  </span> </a> </li>
+                    <li> <a href="#"> Group 5 <span class="value"> 5 </span> <span class="vertical-arrow"> vertically-arrow  </span> </a> </li>
+                  </ul>
+                  <div class="pull-right add-gp-button"> <a href="#"> </a> <span> Add Group </span> </div>
+                </div>
+                <!-- reservation tab end --> 
+                
+              </div>
+              </div>
+			  
+			  <div class="assign-gp1">
+			  
+			   <h1> Assign people to Group 1 (drag and drop to assign or unassign) </h1>
+			   <div class="row assign-gp1-inner">
+                  <div class="col-lg-6 membership">
+                    <h1> Unassigned people </h1>
+                    <div class="content">
+                      <ul class="nav nav-list nav-list-panel unassigned-people">
+                        <li> <a href="#"> <img src="images/m-user.png">  Joey Varnadoe </a> </li>
+                        <li>  <a href="#"> <img src="images/m-user.png"> Shaun Moreton </a> </li>
+                        <li>  <a href="#"> <img src="images/m-user.png"> Alfonso Haverstock </a> </li>
+                        <li>  <a href="#">  <img src="images/off-user.png"> Damon Buresh </a> </li>
+                        <li>  <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                        <li>  <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 membership">
+                    <h1> People assigned to Group 1 </h1>
+                    <form action="" method="POST">
+                      <ul class="nav nav-list nav-list-panel people-assigngp1">
+                        <li class="yellow-star"> <a href="#"> <i class="fa fa-star"></i>  Shannon Fullenwider </a> <span class="gp-first">
+                          <input type="radio" id="" name="question" value="oui" checked >
+                          Walk </span> <span>
+                          <input type="radio" name="question">
+                          Ride </span> </li>
+                        <li>  <a href="#"> <img src="images/off-user.png"> Arturo Franzoni </a> <span class="gp-first">
+                          <input type="radio" checked="checked" name="chek">
+                          Walk </span> <span>
+                          <input type="radio" name="chek">
+                          Ride </span> </li>
+                        <li>  <a href="#"> <img src="images/off-user.png"> Shannon Fullenwider </a> <span class="gp-first">
+                          <input type="radio" name="chek1">
+                          Walk </span> <span>
+                          <input type="radio" checked="checked" name="chek1">
+                          Ride </span> </li>
+                      </ul>
+                    </form>
+                  </div>
+                </div>
+			  
+			  
+			  <div class="row timing-schedule">
+			  
+			  <div class="col-lg-6">
+                    <div class="form-group date-time">
+                      <div class="col-lg-3">
+                        <label class="control-label" for="inputPassword"> Date Time </label>
+                      </div>
+                      <div class="col-lg-9">
+                        <div class="col-lg-4">
+                          <input type="text" class="form-control" id="datepicker3">
+                        </div>
+                        <div class="col-lg-5">
+                          <input type="text" placeholder="" class="form-control">
+                          <span> : </span>
+                          <input type="text" placeholder="" class="form-control">
+                        </div>
+                        <div class="col-lg-3">
+                          <select class="select-time">
+                            <option value="AK">am</option>
+                            <option value="HI">pm</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group starting-hole">
+                      <div class="col-lg-5">
+                        <label class="control-label" for="inputPassword"> Group Starting Hole </label>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="col-lg-10">
+                          <div class="ui-select-box">
+                            <select>
+                              <option selected=""> 01</option>
+                              <option> 02 </option>
+                              <option> 03 </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+				  
+				  
+				  <div class="col-lg-6 available-caddies">
+                   <h1> Available Caddies for group </h1>
+					 <textarea rows="3" class="form-control"></textarea>
+					
+					</div>
+			  
+			  
+			  </div>
+			  
+			  
+			  <form class="bf-example">
+                    <label> Notes </label>
+                    <textarea rows="3" class="form-control"></textarea>
+                    <div class="bf-example">
+                      <button type="button" class="btn btn-primary"> save </button>
+                    </div>
+                  </form>
+			  
+			  </div>
+		  </div>
+		</div>
+	<!-- GOLF TAB ENDS -->
+	<!-- MEALS TAB STARTS -->				
+			<div id="meals" class="tab-pane">
+			 <div id="meals-inner" class="setiontab-inner">
+					<div class="gp1-header">
+                <div class="gp1-header"> 
+                <!-- date tab -->
+                <div class="date-tab">
+                  <ul class="bxslidercol" id="bxslider3">
+                    <li class="active"> <a href="#"> 02/03 </a> </li>
+                    <li> <a href="#"> 02/04 </a> </li>
+                    <li> <a href="#"> 02/05 </a> </li>
+                    <li> <a href="#"> 02/06 </a> </li>
+                  </ul>
+                </div>
+                <!-- date tab end -->        
+                <!-- reservation tab -->
+                <div class="Lodge-tab">
+                  <ul class="bxslidercol" id="bxslider4">
+                    <li class="active"> <a href="#"> Main Restaurant <span class="value"> 56 </span> <span class="vertical-arrow"> vertically-arrow </span> </a> </li>
+                    <li> <a href="#"> Lounge <span class="value black"> 37 </span>
+					<span class="vertical-arrow"> vertically-arrow </span>  </a> </li>
+                  </ul>
+                  <div class="pull-right add-gp-button"> <a href="#"> </a> <span> Add Group </span> </div>
+                </div>
+                <!-- reservation tab end --> 
+                
+              </div>
+              </div>
+			  
+			  <div class="assign-gp1">
+			  
+			   <div class="row assign-gp1-inner">
+                  <div class="col-lg-7 meal-left">
+					<h1>SETUP A NEW TABLE</h1>
+					<p>Please select desired time to see a list of available tables.</p>
+					<form class="timing-form">
+						<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+						</select>
+						<select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+						<option>13</option>
+						<option>14</option>
+						<option>15</option>
+						<option>16</option>
+						<option>17</option>
+						<option>18</option>
+						<option>19</option>
+						<option>20</option>
+						<option>21</option>
+						<option>22</option>
+						</select>
+						<select>
+						<option>AM</option>
+						<option>PM</option>
+						</select>
+					</form>
+					<h1>Available tables on &ldquo;Main Restaurant&rdquo; on specified time:</h1>
+					<ul class="timing-table">
+						<li class="row timing-table-headings">
+							<span class="col-md-4 col-xs-4 nopadding">TABLE</span>
+							<span class="col-md-4 col-xs-4 nopadding">SPACES AVAILABLE</span>
+							<span class="col-md-4 col-xs-4 nopadding">SELECT</span>
+						</li>
+						<li class="row">
+							<span class="col-md-4 col-xs-4 tabcol1">Table1</span>
+							<span class="col-md-4 col-xs-4 tabcol2"><span class="tab-highlight">4</span></span>
+							<span class="col-md-4 col-xs-4 tabcol3"><a class="tab-plus" href="#"></a></span>
+						</li>
+						<li class="row">
+							<span class="col-md-4 col-xs-4 tabcol1">Table1<span>Big</span></span>
+							<span class="col-md-4 col-xs-4 tabcol2"><span class="tab-highlight">4</span></span>
+							<span class="col-md-4 col-xs-4 tabcol3"><a class="tab-plus" href="#"></a></span>
+						</li>
+						<li class="row">
+							<span class="col-md-4 col-xs-4 tabcol1">Table1</span>
+							<span class="col-md-4 col-xs-4 tabcol2"><span class="tab-highlight">4</span></span>
+							<span class="col-md-4 col-xs-4 tabcol3"><a class="tab-plus" href="#"></a></span>
+						</li>
+						<li class="row">
+							<span class="col-md-4 col-xs-4 tabcol1">Table1<span>Big</span></span>
+							<span class="col-md-4 col-xs-4 tabcol2"><span class="tab-highlight">4</span></span>
+							<span class="col-md-4 col-xs-4 tabcol3"><a class="tab-plus" href="#"></a></span>
+						</li>
+						<li class="row">
+							<span class="col-md-4 col-xs-4 tabcol1">Table1<span>Big</span></span>
+							<span class="col-md-4 col-xs-4 tabcol2"><span class="tab-highlight">4</span></span>
+							<span class="col-md-4 col-xs-4 tabcol3"><a class="tab-plus" href="#"></a></span>
+						</li>
+						<li class="row">
+							<span class="col-md-4 col-xs-4 tabcol1">Table1</span>
+							<span class="col-md-4 col-xs-4 tabcol2"><span class="tab-highlight">4</span></span>
+							<span class="col-md-4 col-xs-4 tabcol3"><a class="tab-plus" href="#"></a></span>
+						</li>
+					</ul>
+                  </div>
+                  <div class="col-lg-5 meal-right">
+					<h1>Assigned tables for this Itinerary on 02/03</h1>
+					<span class="has-notes">Has notes</span>
+					<ul class="assign-table">
+						<li class="row timing-table-headings">
+							<span class="col-md-3 col-xs-3 nopadding">TABLE</span>
+							<span class="col-md-3 col-xs-3 nopadding">TIME</span>
+							<span class="col-md-3 col-xs-3 nopadding">OCUUPED</span>
+							<span class="col-md-3 col-xs-3 nopadding">DETAILS</span>
+						</li>
+						<li class="row">
+							<span class="col-md-3 col-xs-3 hasnote tableno">Table 3</span>
+							<span class="col-md-3 col-xs-3 nopadding centertext">11:30AM</span>
+							<span class="col-md-3 col-xs-3 centertext highlated">4/4</span>
+							<span class="col-md-3 col-xs-3"><a class="tab-details" href="#"></a></span>
+						</li>
+						<li class="row">
+							<span class="col-md-3 col-xs-3 tableno">Table 5</span>
+							<span class="col-md-3 col-xs-3 nopadding centertext">11:30AM</span>
+							<span class="col-md-3 col-xs-3 centertext">4/4</span>
+							<span class="col-md-3 col-xs-3"><a class="tab-details" href="#"></a></span>
+						</li>
+						<li class="row">
+							<span class="col-md-3 col-xs-3 hasnote tableno">Table 2</span>
+							<span class="col-md-3 col-xs-3 nopadding centertext">11:30AM</span>
+							<span class="col-md-3 col-xs-3 centertext highlated">4/4</span>
+							<span class="col-md-3 col-xs-3"><a class="tab-details" href="#"></a></span>
+						</li>
+						<li class="row">
+							<span class="col-md-3 col-xs-3 tableno">Table 9</span>
+							<span class="col-md-3 col-xs-3 nopadding centertext">11:30AM</span>
+							<span class="col-md-3 col-xs-3 centertext">4/4</span>
+							<span class="col-md-3 col-xs-3"><a class="tab-details" href="#"></a></span>
+						</li>
+					</ul>
+					
+                  </div>
+                </div>
+			  
+			  
+			  </div>
+			 </div>
+		<!-- SETUP TABLE STARTS -->
+		<div class="table-setup">
+		<h1>SETUP TABLE 1</h1><a class="setup-close" href="#"></a>
+			<div class="row">
+				<div class="col-lg-3 nopadding">
+				<h5>Unassigned people</h5>
+				<div class="content" >
+                      <ul class="people-list">
+                        <li> <a href="#"> <img src="images/m-user.png">  Joey Varnadoe </a> </li>
+                        <li>  <a href="#"> <img src="images/m-user.png"> Shaun Moreton </a> </li>
+                        <li>  <a href="#"> <img src="images/m-user.png"> Alfonso Haverstock </a> </li>
+                        <li>  <a href="#">  <img src="images/off-user.png"> Damon Buresh </a> </li>
+                        <li>  <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                        <li>  <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                      </ul>
+                    </div>
+				</div>
+				<div class="col-lg-4 selected-people">
+				<h5>Table</h5>
+				<div class="content" >
+                      <ul class="people-list">
+                        <li> <a href="#"> <img src="images/m-user.png">  Joey Varnadoe </a> </li>
+                        <li>  <a href="#"> <img src="images/m-user.png"> Shaun Moreton </a> </li>
+						<li>  <a href="#"> <img src="images/m-user.png"> Shaun Moreton </a> </li>
+						<li>  <a href="#"> <img src="images/m-user.png"> Shaun Moreton </a> </li>
+                        <li class="drag-people">  <a href="#">Drag User Here </a> </li>
+                        <li class="drag-people">  <a href="#">Drag User Here </a> </li>
+                      </ul>
+                    </div>
+				</div>
+				<div class="col-lg-5 text-notes">
+				<h5>Notes</h5>
+				<textarea name="notes" id="notes"></textarea>
+				</div>
+			</div>
+			<button class="btn btn-primary" type="button"> save </button>
+		</div>		
+		<!-- SETUP TABLE ENDS -->		
+		
+		</div>
+	<!-- MEALS TAB ENDS -->	
+		<div id="events" class="tab-pane">
+			<div id="events-inner" class="setiontab-inner">
+			
+           
+				<div class="gp1-header">
+                <div class="gp1-header"> 
+                <!-- date tab -->
+                <div class="date-tab">
+                  <ul class="bxslidercol" id="bxslider10">
+                    <li class="active"> <a href="#"> 02/03 </a> </li>
+                    <li> <a href="#"> 02/04 </a> </li>
+                    <li> <a href="#"> 02/05 </a> </li>
+                    <li> <a href="#"> 02/06 </a> </li>
+                  </ul>
+                </div>
+                <!-- date tab end -->        
+                <!-- reservation tab -->
+                <div class="Lodge-tab">
+                  <ul class="bxslidercol" id="bxslider11">
+                    <li class="active"> <a href="#"> Loaction 1 <span class="vertical-arrow"> vertically-arrow </span></a> </li>
+                    <li> <a href="#"> Loaction 2  <span class="vertical-arrow"> vertically-arrow </span></a> </li>
+                    <li> <a href="#"> Loaction 3  <span class="vertical-arrow"> vertically-arrow </span></a> </li>
+                  </ul>
+                  <div class="pull-right add-gp-button"> <a href="#"> </a> <span> Add Location </span> </div>
+                </div>
+                <!-- reservation tab end --> 
+                
+              </div>
+              </div>
+			  
+			<div class="assign-gp1"> 
+		   <div class="row assign-gp1-inner">
+				<div class="col-lg-7 tras-left">
+                    <h1> Event Editor </h1>
+					<div class="transport-form">
+						<ul>
+						<li class="col-lg-6 nopadding"><input type="text" placeholder="Start Time" class="tran-input"></li>
+						<li  class="col-lg-6 nopadding"><input type="text" placeholder="End Time" class="tran-input"></li>
+					
+						</ul>
+					</div>
+					
+					<div class="assets-form">
+					<h1> Assets </h1>
+					
+					<form class="assets-form-data content">
+						<ul class="assets-menu">
+						<li>
+						
+						<ul>
+						<li class="col-lg-6"> <input type="checkbox" checked="checked"> <span> Asset 1 </span></li>
+						<li class="col-lg-6"><input type="checkbox" checked="checked"> <span> Asset 2 </span></li>
+						</ul>
+						
+						<ul>
+						<li class="col-lg-6"><input type="checkbox" checked="checked"> <span> Asset 3 </span></li>
+						<li class="col-lg-6"><input type="checkbox" checked="checked"> <span> Asset 4 </span></li>
+						</ul>
+						<ul>
+						<li class="col-lg-6"><input type="checkbox" checked="checked"><span> Asset 5 </span></li>
+						<li class="col-lg-6"><input type="checkbox" checked="checked"><span> Asset 6 </span></li>
+						</ul>
+						
+						<ul>
+						<li class="col-lg-6"><input type="checkbox" checked="checked"><span> Asset 7 </span></li>
+						<li class="col-lg-6"><input type="checkbox" checked="checked"><span> Asset 8 </span></li>
+						</ul>
+						</li>
+					
+						</ul>
+						</form>
+
+						</div>
+					 
+				</div>
+				<div class="col-lg-5 tras-right">
+				<h1> Notes </h1>
+				<textarea name="tnotes" placeholder="Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. "></textarea>
+				
+				</div>
+				</div>
+				
+				<div class="transport-people">
+				 <div class="row">
+                  <div class="col-lg-5 membership">
+                    <h1> Unassigned people </h1>
+                    <div class="content">
+                      <ul class="nav nav-list nav-list-panel unassigned-people">
+                        <li> <a href="#"> <img src="images/m-user.png">  Joey Varnadoe </a> </li>
+                        <li>  <a href="#"> <img src="images/m-user.png"> Shaun Moreton </a> </li>
+                        <li>  <a href="#"> <img src="images/m-user.png"> Alfonso Haverstock </a> </li>
+                        <li>  <a href="#">  <img src="images/off-user.png"> Damon Buresh </a> </li>
+                        <li>  <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                        <li>  <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                      </ul>
+                    </div>
+                  </div>
+				  <div class="col-lg-1 membership">
+				  <a href="#" class="guest-arrow remove-guest"></a>
+				  <a href="#" class="guest-arrow add-guest"></a>
+				  </div>
+                  <div class="col-lg-6 membership trans-guests attendees">
+                    <h1> Meeting Attendees </h1>
+                     <ul>
+					 <li><a href="#"> <i class="fa fa-star"></i><b>Shannon Fullenwider</b></a> </li>
+					 <li><a href="#"> <img src="images/off-user.png"> Arturo Franzoni </a> </li>
+					 <li><a href="#"> <img src="images/off-user.png"> Cameron Arbeiter </a> </li>
+					 </ul>
+                  </div>
+                </div>
+			</div>
+			
+			</div>				
+				
+				
+			</div>
+		</div>
+	<!-- Transport TAB STARTS -->
+		<div id="transport" class="tab-pane">
+			<div id="transport-inner" class="setiontab-inner">
+				<div class="gp1-header">
+                <div class="gp1-header"> 
+                <!-- date tab -->
+                <div class="date-tab">
+                  <ul class="bxslidercol" id="bxslider8">
+                    <li class="active"> <a href="#"> 02/03 </a> </li>
+                    <li> <a href="#"> 02/04 </a> </li>
+                    <li> <a href="#"> 02/05 </a> </li>
+                    <li> <a href="#"> 02/06 </a> </li>
+                  </ul>
+                </div>
+                <!-- date tab end -->        
+                <!-- reservation tab -->
+                <div class="Lodge-tab">
+                  <ul class="bxslidercol" id="bxslider9">
+                    <li class="active"> <a href="#"> Vehic. 1 <span class="value"> 3 </span> <span class="vertical-arrow"> vertically-arrow </span> </a> </li>
+                    <li> <a href="#"> Vehic. 2 <span class="value black"> 0 </span>
+					<span class="vertical-arrow"> vertically-arrow </span>  </a> </li>
+                    <li> <a href="#"> Vehic. 3 <span class="value"> 2 </span> <span class="vertical-arrow"> vertically-arrow </span> </a> </li>
+                    <li> <a href="#"> Vehic. 4 <span class="value"> 1 </span> <span class="vertical-arrow"> vertically-arrow  </span> </a> </li>
+                    <li> <a href="#"> Vehic. 5 <span class="value"> 5 </span> <span class="vertical-arrow"> vertically-arrow  </span> </a> </li>
+                  </ul>
+                  <div class="pull-right add-gp-button"> <a href="#"> </a> <span> Add Vehicle </span> </div>
+                </div>
+                <!-- reservation tab end --> 
+                
+              </div>
+              </div>
+			  
+			  <div class="assign-gp1">
+			  
+		   <div class="row assign-gp1-inner">
+				<div class="col-lg-7 tras-left">
+                    <h1> Transportation Editor </h1>
+					<div class="transport-form">
+						<ul>
+						<li class="input-trans"><input type="text" placeholder="Start Time" class="tran-input"></li>
+						<li><input type="text" placeholder="End Time" class="tran-input"></li>
+						<li class="input-trans"><select>
+								<option>Place</option>
+								<option>Place</option>
+								<option>Place</option>
+								<option>Place</option>
+							</select>
+						</li>
+						<li><input type="text" placeholder="Driver" class="tran-input"></li>
+						<li class="input-trans"><select>
+								<option>Airline</option>
+								<option>Airline</option>
+								<option>Airline</option>
+								<option>Airline</option>
+							</select>
+						</li>
+						<li><input type="text" placeholder="Depart" class="tran-input"></li>
+						<li class="input-trans"><input type="text" placeholder="Flight#" class="tran-input"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-5 tras-right">
+				<h1> Notes </h1>
+				<textarea name="tnotes"></textarea>
+				
+				</div>
+				</div>
+				
+				<div class="transport-people">
+				 <div class="row">
+                  <div class="col-lg-5 membership">
+                    <h1> Unassigned people </h1>
+                    <div class="content">
+                      <ul class="nav nav-list nav-list-panel unassigned-people">
+                        <li> <a href="#"> <img src="images/m-user.png">  Joey Varnadoe </a> </li>
+                        <li>  <a href="#"> <img src="images/m-user.png"> Shaun Moreton </a> </li>
+                        <li>  <a href="#"> <img src="images/m-user.png"> Alfonso Haverstock </a> </li>
+                        <li>  <a href="#">  <img src="images/off-user.png"> Damon Buresh </a> </li>
+                        <li>  <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                        <li>  <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                      </ul>
+                    </div>
+                  </div>
+				  <div class="col-lg-1 membership">
+				  <a href="#" class="guest-arrow remove-guest"></a>
+				  <a href="#" class="guest-arrow add-guest"></a>
+				  </div>
+                  <div class="col-lg-6 membership trans-guests">
+                    <h1> Transportation Guests </h1>
+                     <ul>
+					 <li> <a href="#"> <i class="fa fa-star"></i> Alfonso Haverstock</a> </li>
+					 <li><a href="#"><img src="images/m-user.png"> Alfonso Haverstock </a></li>
+					 <li><a href="#"><img src="images/m-user.png"> Alfonso Haverstock </a></li>
+					 </ul>
+                  </div>
+                </div>
+			</div>
+			  
+  		  
+			  </div>
+
+			</div>	
+		</div>
+	<!-- Transport TAB ENDS -->
+		
+	<div id="accomodations" class="tab-pane">
+	  <div id="accomodations-inner" class="setiontab-inner">
+			 <div class="gp1-header"> 
+                <!-- date tab -->
+                <div class="date-tab">
+                  <ul class="bxslidercol" id="bxslider5">
+                    <li class="active"> <a href="#"> 02/03 </a> </li>
+                    <li> <a href="#"> 02/04 </a> </li>
+                    <li> <a href="#"> 02/05 </a> </li>
+                    <li> <a href="#"> 02/06 </a> </li>
+                  </ul>
+                </div>
+                <!-- date tab end --> 
+                
+                <!-- reservation tab -->
+                <div class="reservation-tab">
+                  <ul class="bxslidercol" id="bxslider6">
+                    <li> <a href="#"> Reservation 1 <span class="am"> AM </span>  </a> </li>
+                    <li class="active"> <a href="#"> Reservation 2 <span class="pm"> pm </span> </a> </li>
+                    <li> <a href="#"> Reservation 3  <span class="all-day"> All Day </span></a> </li>
+                  </ul>
+                </div>
+                <!-- reservation tab end --> 
+                
+                <!-- reservation tab -->
+                <div class="Lodge-tab">
+                  <ul class="bxslidercol" id="bxslider7">
+                    <li class="active"> <a href="#"> Lodge  1 <span class="value"> 3 </span> <span class="vertical-arrow"> vertically-arrow </span> </a> </li>
+                    <li> <a href="#"> Lodge 2 <span class="value black"> 0 </span>
+					<span class="vertical-arrow"> vertically-arrow </span>  </a> </li>
+                    <li> <a href="#"> Lodge 3 <span class="value"> 2 </span> <span class="vertical-arrow"> vertically-arrow </span> </a> </a> </li>
+                    <li> <a href="#"> Lodge 4 <span class="value"> 1 </span> <span class="vertical-arrow"> vertically-arrow  </span> </a> </a> </li>
+                    <li> <a href="#"> Lodge 5 <span class="value"> 5 </span> <span class="vertical-arrow"> vertically-arrow  </span> </a> </a> </li>
+                  </ul>
+                  <div class="pull-right add-gp-button"> <a href="#"> </a> <span> Add Lodge </span> </div>
+                </div>
+                <!-- reservation tab end --> 
+                
+              </div>
+              <div class="assign-gp1">
+                <h1> Assign people to Group 1 (drag and drop to assign or unassign) </h1>
+                <div class="row assign-gp1-inner">
+                  <div class="col-lg-4 membership">
+                    <h1> Unassigned people </h1>
+                    <div class="content">
+                      <ul class="nav nav-list nav-list-panel unassigned-people">
+                        <li> <a href="#"> <img src="images/m-user.png"> Joey Varnadoe </a> </li>
+                        <li> <a href="#"> <img src="images/m-user.png"> Shaun Moreton </a> </li>
+                        <li> <a href="#"> <img src="images/m-user.png"> Alfonso Haverstock </a> </li>
+                        <li> <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                        <li> <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                        <li> <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+						<li> <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+						<li> <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+						<li> <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+						<li> <a href="#"> <img src="images/off-user.png"> Damon Buresh </a> </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-8 membership lodge-tab-cont">
+                    <h1> LODGE 1  </h1>
+					<div class="lodge-tab">
+					   <div class="bf-example">
+						<ul class="nav nav-tabs bxslider">
+							<li class="active">
+							<a data-toggle="tab" href="#r100" class="tab-default"> Room 100  <span class="vertical-arrow">&nbsp;</span></a>
+							
+							</li>
+							<li><a data-toggle="tab" href="#r101" class="tab-default"> Room 101 <span class="vertical-arrow">&nbsp;</span> </a></li>
+							<li ><a data-toggle="tab" href="#r102" class="tab-default"> Room 102 <span class="vertical-arrow">&nbsp;</span></a></li>
+							<li><a data-toggle="tab" href="#r103" class="tab-default">Room 103 <span class="vertical-arrow">&nbsp;</span></a></li>
+						</ul>
+						<div class="tab-content" id="myTabContent">
+							<div id="r100" class="tab-pane fade"> 
+								<ul class="nav nav-list">
+								<li class="active"> <a href="#"> <img src="images/lodge-Varnadoe.png"> <span> Joey Varnadoe </span> </a> </li>
+								<li> <a href="#"> <img src="images/lodge-drag.png">  <span> DRAG PEOPLE HERE </span></a> </li>
+								<li> <a href="#"> <img src="images/lodge-drag.png">  <span> DRAG PEOPLE HERE </span></a> </li>	
+								</ul>
+								
+								<ul  class="nav nav-list">
+								<li> <a href="#"> <img src="images/lodge-drag.png">  <span> DRAG PEOPLE HERE </span></a> </li>
+								</ul>
+								
+								
+								
+								
+							</div>
+							<div id="r101" class="tab-pane fade active in">
+							<ul class="nav nav-list">
+								<li class="active"> <a href="#"> <img src="images/lodge-Varnadoe.png"> <span> Joey Varnadoe </span> </a> </li>
+								<li> <a href="#"> <img src="images/lodge-drag.png">  <span> DRAG PEOPLE HERE </span></a> </li>
+								<li> <a href="#"> <img src="images/lodge-drag.png">  <span> DRAG PEOPLE HERE </span></a> </li>	
+								</ul>
+								
+							</div>
+							<div id="r102" class="tab-pane fade">
+							<ul class="nav nav-list">
+								<li class="active"> <a href="#"> <img src="images/lodge-Varnadoe.png"> <span> Joey Varnadoe </span> </a> </li>
+								<li> <a href="#"> <img src="images/lodge-drag.png">  <span> DRAG PEOPLE HERE </span></a> </li>
+								<li> <a href="#"> <img src="images/lodge-drag.png">  <span> DRAG PEOPLE HERE </span></a> </li>	
+								</ul>
+								
+							</div>
+							<div id="r103" class="tab-pane fade">
+							<ul class="nav nav-list">
+								<li class="active"> <a href="#"> <img src="images/lodge-Varnadoe.png"> <span> Joey Varnadoe </span> </a> </li>
+								<li> <a href="#"> <img src="images/lodge-drag.png">  <span> DRAG PEOPLE HERE </span></a> </li>
+								<li> <a href="#"> <img src="images/lodge-drag.png">  <span> DRAG PEOPLE HERE </span></a> </li>	
+								</ul>
+								
+							</div>
+						</div>
+					</div>
+                  </div>
+                </div>
+                
+                <!-- timing-schedule -->
+                <div class="row timing-schedule">       
+                  <form class="bf-example">
+                    <label> Notes </label>
+                    <textarea rows="3" class="form-control"></textarea>
+                    <div class="bf-example">
+                      <button type="button" class="btn btn-primary"> save </button>
+                    </div>
+                  </form>
+                </div>
+                <!-- timing-schedule end ---> 
+                
+              </div>
+            </div>
+		</div>
+							
+							
+							
+						</div>
+					
+					
+					
+					
+              
+		  
+		  
+		  
+		  
+		  </div>
+        </div>
+        <!-- Groups and Options Sections end ---> 
+        
+      </div>
+      <!--- Itinerary SECTION ---> 
+      
+    </div>
+    <!--- right content section end ---> 
+    
+  </div>
+</div>
+<!--- content end ---> 
+
+
+
+<!--- date picker jquary ---> 
+
+
+<!--- multple selector --> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+<script src="js/chosen.jquery.js"></script>
+<script type="text/javascript">
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      jQuery(selector).chosen(config[selector]);
+    }
+ </script>
+<script src="js/bxslider-crausel.js"></script>	
+<script src="js/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="js/jquery.bxslider.css" rel="stylesheet" />	
+<script type="text/javascript">
+jQuery(document).ready(function(){
+  jQuery('#bxslider1').bxSlider();
+  jQuery('#bxslider2').bxSlider();
+  jQuery('#bxslider3').bxSlider();
+  jQuery('#bxslider4').bxSlider();
+  jQuery('#bxslider5').bxSlider();
+  jQuery('#bxslider6').bxSlider();
+  jQuery('#bxslider7').bxSlider();
+  jQuery('#bxslider8').bxSlider();
+  jQuery('#bxslider9').bxSlider();
+  jQuery('#bxslider10').bxSlider();
+  jQuery('#bxslider11').bxSlider();
+});
+</script>
+<script>
+jQuery(document).ready(function(){
+jQuery('.create-sub-menu').css({"display":"none"});
+  var counter =  1;
+  jQuery("#hide").addClass('hide1');
+  jQuery("#hide").click(function(e){
+	e.preventDefault();
+    jQuery("#firstimpression").toggle();
+	if(counter%2 == 0)
+	{
+	jQuery(this).removeClass('show');
+	jQuery(this).addClass('hide1');
+	}
+	else
+	{
+	jQuery(this).addClass('show');
+	jQuery(this).removeClass('hide1');
+	}
+	counter++;
+  //  $(".slidingDiv, .create-sub-menu").css("display","block");
+  });
+  jQuery('#create-menu').click(function(e){
+	e.preventDefault();
+	jQuery('.create-sub-menu').toggle();
+  });
+});
+</script>
+<!--- collapsed menu---> 
+<script>
+jQuery(document).ready(function(){
+  jQuery("#hide1").click(function(){
+    jQuery("#firstimpression1, #firstimpression3").toggle();
+  });
+  jQuery("#hide2").click(function(){
+    jQuery("#firstimpression2").toggle();
+  });
+});
+</script>
+
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+</body>
+</html>
